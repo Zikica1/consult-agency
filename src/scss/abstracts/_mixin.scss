@@ -1,0 +1,14 @@
+$size-md: 48rem; //768px
+$size-lg: 56.25rem; //900px
+
+@mixin middleSize {
+  @media (min-width: #{$size-md}) {
+    @content;
+  }
+}
+
+@mixin largeSize {
+  @media (min-width: #{$size-lg}) {
+    @content;
+  }
+}

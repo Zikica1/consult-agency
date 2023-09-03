@@ -1,0 +1,262 @@
+@import "https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700;800&display=swap";
+*, :before, :after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow: hidden;
+}
+
+body {
+  color: #7a7a7a;
+  font-family: Barlow, sans-serif;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 75em;
+  margin-inline: auto;
+  padding-inline: 2.1875em;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  color: #7a7a7a;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+@keyframes SlideFromLeft {
+  to {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+.header-primary {
+  z-index: 10;
+  background-color: #0000;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5em 2.1875em;
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+@media (width >= 48rem) {
+  .header-primary {
+    padding-block: 2em;
+  }
+}
+
+.logo a {
+  color: #00276a;
+  font-size: 1.5rem;
+  font-style: italic;
+  font-weight: 700;
+}
+
+.logo span {
+  font-weight: 500;
+}
+
+.header-primary nav {
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  background-color: #fff;
+  width: 100%;
+  height: 100vh;
+  transition: opacity .5s;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+@media (width >= 56.25rem) {
+  .header-primary nav {
+    position: unset;
+    background-color: unset;
+    opacity: 1;
+    visibility: visible;
+    width: auto;
+    height: auto;
+  }
+}
+
+.header-primary nav.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.nav-body {
+  opacity: 0;
+  place-content: center;
+  width: 100%;
+  height: 100%;
+  transition: all .5s;
+  display: grid;
+  transform: translateY(-50px);
+}
+
+@media (width >= 56.25rem) {
+  .nav-body {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.header-primary nav.active .nav-body {
+  opacity: 1;
+  transform: translateZ(0);
+}
+
+@media (width >= 56.25rem) {
+  .nav-body ul {
+    display: flex;
+  }
+}
+
+.header-primary .close-btn {
+  aspect-ratio: 1;
+  cursor: pointer;
+  border: 1px solid #707070;
+  border-radius: 50%;
+  justify-self: center;
+  place-items: center;
+  width: 1.875em;
+  display: grid;
+  transform: translateY(-70px);
+}
+
+@media (width >= 56.25rem) {
+  .header-primary .close-btn {
+    display: none;
+  }
+}
+
+.header-primary nav a {
+  color: #00276a;
+  text-align: center;
+  padding-block: .77em;
+  font-size: 1.625rem;
+  font-weight: 500;
+  transition: all .2s;
+  display: block;
+}
+
+.header-primary nav a:hover {
+  color: #ffe046;
+}
+
+@media (width >= 56.25rem) {
+  .header-primary nav a {
+    padding-inline: 24px;
+    font-size: 1.125rem;
+  }
+}
+
+.free-col {
+  visibility: hidden;
+  align-items: center;
+  gap: 2.187em;
+  margin-left: auto;
+  margin-right: 2.187em;
+  display: flex;
+}
+
+@media (width >= 48rem) {
+  .free-col {
+    visibility: visible;
+  }
+}
+
+@media (width >= 56.25rem) {
+  .free-col {
+    margin-inline: 0;
+  }
+}
+
+.free-col img {
+  object-fit: cover;
+  width: 2.187em;
+  height: 2.187em;
+}
+
+.free-col strong {
+  color: #00276a;
+  letter-spacing: 1px;
+  font-size: 1.125rem;
+  display: block;
+}
+
+.free-col span {
+  color: #fcad25;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  margin-block: .3125em .625em;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.hamburger {
+  cursor: pointer;
+  clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+  background: none;
+  border: none;
+  width: 1.5em;
+  height: 1.5em;
+  transition: all .3s;
+  animation: 2s ease-in-out 3.1s forwards SlideFromLeft;
+  position: relative;
+}
+
+@media (width >= 56.25rem) {
+  .hamburger {
+    display: none;
+  }
+}
+
+.hamburger :is(.ham-top, .ham-middle, .ham-bottom) {
+  background-color: #00276a;
+  width: 100%;
+  height: 2px;
+  transition: all .3s;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.ham-middle {
+  transform: translateY(7px);
+}
+
+.ham-bottom {
+  transform: translateY(14px);
+}
+
+.open .ham-top {
+  transform: rotate(45deg)translateY(6px)translateX(6px);
+}
+
+.open .ham-middle {
+  display: none;
+}
+
+.open .ham-bottom {
+  transform: rotate(-45deg)translateY(6px)translateX(-6px);
+}
+
+/*# sourceMappingURL=index.b10d73a7.css.map */
