@@ -1,0 +1,148 @@
+@use '../abstracts' as *;
+@use '../components' as *;
+
+.hero {
+  position: relative;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  width: 95vw;
+  margin: 0 calc(-40vw + 10%);
+  height: 98%;
+  background-image: $gradient-3;
+  border-bottom-right-radius: 300px;
+  // border-radius: 10% 10% 89% 0% / 0% 0% 41% 10%;
+}
+
+.hero-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 150px 0 0 35px;
+}
+
+.hero-left-col {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 10vw);
+  align-items: end;
+}
+
+.hero-left-col > img {
+  object-fit: cover;
+}
+
+.hero-left-col .circle-bl-1 {
+  grid-column: 1/8;
+  grid-row: 1/9;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.hero-left-col .circle-yellow {
+  grid-column: 1/7;
+  grid-row: 3/9;
+  width: 87%;
+  height: 97%;
+  z-index: 2;
+}
+
+.hero-left-col .hero-person {
+  grid-row: 1/9;
+  grid-column: 1/6;
+  height: 100%;
+  width: 90%;
+  transform: translate(5%, 0);
+  z-index: 3;
+}
+
+.hero-left-col .circle-green-1 {
+  grid-column: 2/4;
+  grid-row: 2;
+  width: 85%;
+  transform: translate(35%, 40%);
+  z-index: 2;
+}
+
+.hero-left-col .half-circle-grey {
+  grid-column: 5/6;
+  grid-row: 2;
+  width: 100%;
+  z-index: 1;
+  transform: translate(20%, 18%);
+}
+
+.hero-left-col .half-circle-green {
+  grid-column: 6/8;
+  grid-row: 2/4;
+  width: 55%;
+  height: 60%;
+  align-self: start;
+  transform: translate(20%, 5%);
+  z-index: 1;
+}
+
+.hero-left-col .half-circle-blue-2 {
+  grid-column: 6/8;
+  grid-row: 4/5;
+  width: 58%;
+  z-index: 1;
+  transform: translate(15%, -25%);
+}
+
+.hero-rectangle {
+  position: absolute;
+  top: -35px;
+  left: 55%;
+  transform: rotate(180deg);
+}
+
+.hero-left-col .half-circle-blue-3 {
+  grid-column: 1/4;
+  grid-row: 1/5;
+  width: 100%;
+  height: 100%;
+  transform: translate(-75%, 4%);
+}
+
+.hero-right-col {
+  padding-inline-end: 2.1875em;
+}
+
+.hero-left-col .rectangle-2 {
+  grid-row: 1;
+  grid-column: 1;
+  transform: translate(-110%, -50%);
+  z-index: -1;
+}
+
+.hero-right-col .hero-headline {
+  color: $color-first;
+  font-size: $headline-md;
+  font-weight: 600;
+  line-height: 1.17;
+  margin-block-end: 0.77em;
+}
+
+.hero-right-col .hero-subheading {
+  color: $color-first;
+  font-size: $title-md;
+  font-weight: 500;
+  line-height: 1.38em;
+}
+
+.hero-right-col .hero-text {
+  color: $color-third;
+  font-size: $body-sm;
+  margin-block: 0.785em 2.5em;
+  line-height: 1.438em;
+}
+
+.hero-right-col .hero-rectangle-3 {
+  position: relative;
+  z-index: 1;
+  transform: translate(-20%, -5%);
+}
