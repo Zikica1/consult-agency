@@ -1,5 +1,13 @@
+$size-sm: 26.56rem; //425px
 $size-md: 48rem; //768px
 $size-lg: 56.25rem; //900px
+$size-xl: 65.375rem; //1046px
+
+@mixin smallSize {
+  @media (min-width: #{$size-sm}) {
+    @content;
+  }
+}
 
 @mixin middleSize {
   @media (min-width: #{$size-md}) {
@@ -9,6 +17,12 @@ $size-lg: 56.25rem; //900px
 
 @mixin largeSize {
   @media (min-width: #{$size-lg}) {
+    @content;
+  }
+}
+
+@mixin extraLargeSize {
+  @media (min-width: #{$size-xl}) {
     @content;
   }
 }
