@@ -579,6 +579,19 @@ async function load() {
     page.render();
 }
 load();
+//hero observer
+const rightCon = document.querySelectorAll(".right-container");
+const herObserver = new IntersectionObserver((entries)=>{
+    entries.forEach((entry)=>{
+        entry.target.classList.toggle("active", entry.isIntersecting);
+        if (entry.isIntersecting) herObserver.unobserve(entry.target);
+    });
+}, {
+    rootMargin: "0px 0px -150px 0px"
+});
+rightCon.forEach((container)=>{
+    herObserver.observe(container);
+});
 
 },{"2182b4642506a29c":"kTqFQ"}],"kTqFQ":[function(require,module,exports) {
 module.exports = require("333a34b064479e0f")(require("f05d53e69cfee187").getBundleURL("g05j8") + "main.18dbc454.js" + "?" + Date.now()).catch((err)=>{

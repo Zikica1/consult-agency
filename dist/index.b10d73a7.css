@@ -35,9 +35,133 @@ img, svg {
   display: block;
 }
 
-@keyframes SlideFromLeft {
+@keyframes SlideFromLeft2 {
   to {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+@keyframes FadeInDown1 {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes FadeInDown2 {
+  0% {
+    opacity: 0;
+    transform: translateY(-70px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes FadeInDown3 {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes FadeInUp1 {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes FadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(5%);
+  }
+}
+
+@keyframes FadeInLeft2 {
+  to {
+    visibility: visible;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes ScaleUp {
+  to {
+    opacity: 1;
+    transform: translate(35%, 40%)scale(1);
+  }
+}
+
+@keyframes SlideFromTop {
+  to {
+    clip-path: circle(140.9% at 0 0);
+  }
+}
+
+@keyframes SlideFromBottom {
+  to {
+    opacity: 1;
+    clip-path: circle(127.1% at 78% 0);
+  }
+}
+
+@keyframes SlideFromLeft {
+  to {
+    opacity: 1;
+    clip-path: circle(141.4% at 0 100%);
+  }
+}
+
+@keyframes ZoomIn {
+  0% {
+    opacity: 0;
+    transform: scale3d(.6, .6, .6);
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate3d(1px, 1px, 1px);
+  }
+}
+
+@keyframes SlideMoveDown {
+  to {
+    clip-path: polygon(0 1%, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+@keyframes SlideFromLeft3 {
+  to {
+    transform: translate(-50%, 4%)scale(1);
+  }
+}
+
+@keyframes SlideFromLeft4 {
+  to {
+    transform: translate(-130%)scale(1);
   }
 }
 
@@ -58,6 +182,10 @@ img, svg {
   .header-primary {
     padding-block: 2em;
   }
+}
+
+.logo {
+  animation: 2s cubic-bezier(.77, 0, .175, 1) forwards FadeInDown2;
 }
 
 .logo a {
@@ -82,6 +210,7 @@ img, svg {
   position: fixed;
   top: 0;
   right: 0;
+  overflow: hidden;
 }
 
 @media (width >= 56.25rem) {
@@ -114,6 +243,15 @@ img, svg {
   .nav-body {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@media (width >= 65.375rem) {
+  .nav-body {
+    opacity: 0;
+    visibility: hidden;
+    animation: 2.5s cubic-bezier(.77, 0, .175, 1) forwards FadeInLeft2;
+    transform: translateX(-100%);
   }
 }
 
@@ -218,8 +356,7 @@ img, svg {
   border: none;
   width: 1.5em;
   height: 1.5em;
-  transition: all .3s;
-  animation: 2s ease-in-out 3.1s forwards SlideFromLeft;
+  animation: 2s ease-in-out 3.1s forwards SlideFromLeft2;
   position: relative;
 }
 
@@ -330,6 +467,8 @@ img, svg {
   height: 98%;
   margin: 0 calc(30% - 40vw);
   position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .hero-container {
@@ -368,6 +507,7 @@ img, svg {
   grid-area: 1 / 1 / 9 / 8;
   max-width: 100%;
   height: 100%;
+  animation: 1.2s FadeInDown1;
 }
 
 @media (width >= 26.56rem) {
@@ -389,13 +529,21 @@ img, svg {
   grid-area: 3 / 1 / 9 / 7;
   width: 87%;
   height: 97%;
+  overflow: hidden;
+}
+
+.hero-left-col .circle-yellow img {
+  opacity: 0;
+  animation: 2s .5s forwards FadeInUp1;
 }
 
 .hero-left-col .hero-person {
   z-index: 3;
+  opacity: 0;
   grid-area: 1 / 1 / 9 / 6;
   width: 90%;
   height: 100%;
+  animation: 1.2s 2s forwards FadeInLeft;
   transform: translate(5%);
 }
 
@@ -406,10 +554,12 @@ img, svg {
 }
 
 .hero-left-col .circle-green-1 {
+  opacity: 0;
   z-index: 2;
   grid-area: 2 / 2 / auto / 4;
   width: 85%;
-  transform: translate(35%, 40%);
+  animation: 2s forwards ScaleUp;
+  transform: translate(35%, 40%)scale(0);
 }
 
 @media (width >= 65.375rem) {
@@ -420,8 +570,10 @@ img, svg {
 
 .hero-left-col .half-circle-grey {
   z-index: 1;
+  clip-path: circle(1.5% at 0 0);
   grid-area: 2 / 5 / auto / 6;
   width: 100%;
+  animation: 2s cubic-bezier(.645, .045, .355, 1) 1.4s forwards SlideFromTop;
   transform: translate(20%, 18%);
 }
 
@@ -432,11 +584,14 @@ img, svg {
 }
 
 .hero-left-col .half-circle-green {
+  opacity: 0;
+  clip-path: circle(7.1% at 0 100%);
   z-index: 1;
   grid-area: 2 / 6 / 4 / 8;
   align-self: start;
   width: 55%;
   height: auto;
+  animation: 2s cubic-bezier(.645, .045, .355, 1) 2.5s forwards SlideFromLeft;
   transform: translate(20%, 5%);
 }
 
@@ -448,8 +603,11 @@ img, svg {
 
 .hero-left-col .half-circle-blue-2 {
   z-index: 1;
+  clip-path: circle(2.1% at 78% 0);
+  opacity: 0;
   grid-area: 4 / 6 / 5 / 8;
   width: 58%;
+  animation: 2s cubic-bezier(.645, .045, .355, 1) 1.4s forwards SlideFromBottom;
   transform: translate(15%, -25%);
 }
 
@@ -465,10 +623,12 @@ img, svg {
 
 @media (width >= 65.375rem) {
   .hero-left-col .circle-blue-3 {
+    transform-origin: 0%;
     grid-area: 2 / 1 / auto / 3;
     width: 65%;
+    animation: 2s 1s forwards SlideFromLeft3;
     display: block;
-    transform: translate(-50%, 4%);
+    transform: translate(-50%, 4%)scale(0);
   }
 }
 
@@ -486,9 +646,11 @@ img, svg {
 }
 
 .hero-left-col .rectangle-blue {
+  clip-path: polygon(0 1%, 100% 0, 100% 69%, 0 69%);
   grid-area: 1 / 1 / 5;
   max-width: 100%;
   height: 100%;
+  animation: 2s cubic-bezier(.77, 0, .175, 1) .5s forwards SlideMoveDown;
   transform: translate(-85%, 5%);
 }
 
@@ -518,9 +680,11 @@ img, svg {
 
 @media (width >= 65.375rem) {
   .hero-left-col .rectangle-2 {
+    transform-origin: 0%;
     grid-row: 1;
     align-self: start;
-    transform: translate(-130%);
+    animation: 1s cubic-bezier(.77, 0, .175, 1) 3s forwards SlideFromLeft4;
+    transform: translate(-130%)scale(0);
   }
 }
 
@@ -532,6 +696,25 @@ img, svg {
   .hero-right-col {
     flex: 1;
   }
+}
+
+.hero-right-col .right-col-wrapper {
+  overflow-y: hidden;
+}
+
+.hero-right-col :where(.right-col-container, .right-col-container-sec) {
+  opacity: 0;
+  transition: all 1.5s;
+  transform: translateY(-100%);
+}
+
+.hero-right-col .right-col-container-sec {
+  transition-delay: .5s;
+}
+
+.hero-right-col :where(.right-col-container, .right-col-container-sec).active {
+  opacity: 1;
+  transform: none;
 }
 
 .hero-right-col .hero-headline {
@@ -614,10 +797,17 @@ img, svg {
   right: 0;
 }
 
+.hero-svg-container svg {
+  opacity: 0;
+  animation: 1s cubic-bezier(.77, 0, .175, 1) 3.5s forwards FadeInDown1;
+}
+
 .hero-svg-container .circle-green-2 {
   object-fit: cover;
+  opacity: 0;
   width: 5.5em;
   height: 5.5em;
+  animation: 2s cubic-bezier(.77, 0, .175, 1) 4s forwards ZoomIn;
 }
 
 .hero .hero-rectangle-4 {
@@ -636,6 +826,7 @@ img, svg {
   border-radius: 50%;
   width: 400px;
   height: 400px;
+  display: none;
   position: absolute;
   bottom: 0;
   right: 0;
