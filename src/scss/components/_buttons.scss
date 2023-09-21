@@ -59,3 +59,28 @@
 .btn-gradient:hover .btn-text {
   color: $color-second;
 }
+
+/* btn-gradient-2 */
+.btn-gradient-2 {
+  background-image: $gradient-2;
+}
+
+.btn-gradient-2::before {
+  content: '';
+  position: absolute;
+  z-index: 10;
+  inset: 0;
+  opacity: 0;
+  visibility: hidden;
+  background-image: $gradient-1;
+  border-radius: 0.94em;
+  transition: all 0.2s ease;
+}
+
+.btn-gradient-2 .btn-text-2 {
+  color: $color-second;
+}
+
+.btn-gradient-2:hover .btn-text-2 {
+  color: $color-first;
+}
