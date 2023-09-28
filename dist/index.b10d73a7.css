@@ -776,7 +776,7 @@ img, svg {
 
 @media (width >= 65.375rem) {
   .hero-right-col .hero-subheading {
-    font-size: 1.75rem;
+    font-size: 2.06rem;
   }
 }
 
@@ -888,7 +888,7 @@ img, svg {
 .element-col-left h2 {
   color: #00276a;
   margin-block-end: .85em;
-  font-size: 1.75rem;
+  font-size: 2.06rem;
   font-weight: 600;
   line-height: 1.28;
 }
@@ -1120,7 +1120,7 @@ img, svg {
   text-transform: capitalize;
   max-width: 14.28em;
   margin-block-end: 1.25em;
-  font-size: 1.75rem;
+  font-size: 2.06rem;
   line-height: 1.28em;
 }
 
@@ -1249,7 +1249,7 @@ img, svg {
 
 @media (width >= 48rem) {
   .element-services-container h4 {
-    font-size: 1.75rem;
+    font-size: 2.06rem;
   }
 }
 
@@ -1317,6 +1317,179 @@ img, svg {
     top: -45px;
     right: -10px;
   }
+}
+
+.element-portfolio {
+  margin-block-start: 150px;
+  position: relative;
+}
+
+.element-portfolio:before {
+  content: "";
+  z-index: -1;
+  background-image: linear-gradient(#f5f5f5 0%, #fff 100%);
+  border-radius: 50px 300px 50px 50px;
+  width: 90vw;
+  height: 100%;
+  position: absolute;
+}
+
+.element-portfolio-container {
+  padding-inline: 2.1875em;
+}
+
+.element-widget-container {
+  width: clamp(2.31em, 10vw, 4.68em);
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.element-portfolio-title {
+  text-align: center;
+}
+
+.element-portfolio-title .btn-primary {
+  margin-block: 4.375em 2.18em;
+}
+
+.element-portfolio-title h2 {
+  color: #00276a;
+  max-width: 9.09em;
+  margin-block-end: 70px;
+  margin-inline: auto;
+  font-size: 2.06rem;
+  font-weight: 600;
+  line-height: 1.28em;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1100px;
+  position: relative;
+}
+
+.wrapper i {
+  color: #fff;
+  cursor: pointer;
+  text-align: center;
+  background: linear-gradient(#00276a 0%, #2c63c2 100%);
+  border-radius: 12px;
+  width: 50px;
+  height: 50px;
+  font-size: 1.25rem;
+  line-height: 50px;
+  transition: transform .1s linear;
+  box-shadow: 0 3px 6px #0000003b;
+}
+
+.wrapper i:active {
+  transform: scale(.85);
+}
+
+.portfolio-btn {
+  justify-content: space-between;
+  max-width: 9.375em;
+  margin-block: 4.375em 2.18em;
+  margin-inline: auto;
+  display: flex;
+}
+
+.wrapper .carousel {
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  border-radius: 8px;
+  grid-auto-columns: calc(33.3333% - 12px);
+  grid-auto-flow: column;
+  gap: 16px;
+  display: grid;
+  overflow-x: auto;
+}
+
+@media screen and (width <= 900px) {
+  .wrapper .carousel {
+    grid-auto-columns: calc(50% - 9px);
+  }
+}
+
+@media screen and (width <= 700px) {
+  .wrapper .carousel {
+    grid-auto-columns: 100%;
+  }
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel.no-transition {
+  scroll-behavior: auto;
+}
+
+.carousel.dragging {
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+}
+
+.carousel.dragging .card {
+  cursor: grab;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.carousel :where(.card, .img) {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.carousel .card {
+  scroll-snap-align: start;
+  cursor: pointer;
+  background: #fff;
+  border-radius: 0 66px 0 127px;
+  flex-direction: column;
+  width: 90%;
+  list-style: none;
+  position: relative;
+}
+
+.carousel .card .img {
+  width: 100%;
+  height: 100%;
+}
+
+.card .img img {
+  object-fit: cover;
+  border-radius: 0 66px 0 127px;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel .card-title {
+  background: linear-gradient(45deg, #2c63c2 0%, #00276a 100%);
+  border-radius: 0 50px;
+  margin-block-end: 10px;
+  padding: 15px 30px 10px 20px;
+  position: absolute;
+  bottom: 0;
+  right: -7%;
+}
+
+.carousel .card-title h2 {
+  color: #fff;
+  margin-block-end: 10px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.33em;
+}
+
+.carousel .card-title span {
+  color: #fff9;
+  margin-block-end: .71em;
+  font-size: .875rem;
+  display: inline-block;
 }
 
 /*# sourceMappingURL=index.b10d73a7.css.map */

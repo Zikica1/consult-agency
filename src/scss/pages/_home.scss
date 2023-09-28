@@ -779,3 +779,170 @@
     right: -10px;
   }
 }
+
+/* Element Portfolio */
+.element-portfolio {
+  position: relative;
+  margin-block-start: 150px;
+}
+
+.element-portfolio::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  width: 90vw;
+  height: 100%;
+  background-image: linear-gradient(180deg, #f5f5f5 0%, #ffffff 100%);
+  border-radius: 50px 300px 50px 50px;
+}
+
+.element-portfolio-container {
+  padding-inline: 2.1875em;
+}
+
+.element-widget-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: clamp(2.31em, 10vw, 4.68em);
+}
+
+.element-portfolio-title {
+  text-align: center;
+}
+
+.element-portfolio-title .btn-primary {
+  margin-block: 4.375em 2.18em;
+}
+
+.element-portfolio-title h2 {
+  color: $color-first;
+  margin-block-end: 70px;
+  font-size: $title-lg;
+  font-weight: 600;
+  line-height: 1.28em;
+  max-width: 9.09em;
+  margin-inline: auto;
+}
+
+/* Carousel */
+
+.wrapper {
+  max-width: 1100px;
+  width: 100%;
+  position: relative;
+}
+.wrapper i {
+  color: #fff;
+  background: $gradient-5;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  font-size: 1.25rem;
+  // position: absolute;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 12px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+  // transform: translateX(-50%);
+  transition: transform 0.1s linear;
+}
+.wrapper i:active {
+  transform: scale(0.85);
+}
+
+.portfolio-btn {
+  max-width: 9.375em;
+  margin-inline: auto;
+  margin-block: 4.375em 2.18em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.wrapper .carousel {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% / 3) - 12px);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 16px;
+  border-radius: 8px;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+
+  @media screen and (max-width: 900px) {
+    grid-auto-columns: calc((100% / 2) - 9px);
+  }
+
+  @media screen and (max-width: 700px) {
+    grid-auto-columns: 100%;
+  }
+}
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+.carousel.no-transition {
+  scroll-behavior: auto;
+}
+.carousel.dragging {
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+}
+.carousel.dragging .card {
+  cursor: grab;
+  user-select: none;
+}
+.carousel :where(.card, .img) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carousel .card {
+  position: relative;
+  scroll-snap-align: start;
+  // height: 300px;
+  width: 90%;
+  list-style: none;
+  background: #fff;
+  cursor: pointer;
+  // padding-bottom: 15px;
+  flex-direction: column;
+  border-radius: 0 66px 0 127px;
+}
+
+.carousel .card .img {
+  height: 100%;
+  width: 100%;
+}
+.card .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  // border: 4px solid #fff;
+  border-radius: 0 66px 0 127px;
+}
+
+.carousel .card-title {
+  position: absolute;
+  bottom: 0;
+  right: -7%;
+  background: $gradient-6;
+  padding: 15px 30px 10px 20px;
+  margin-block-end: 10px;
+  border-radius: 0 50px;
+}
+
+.carousel .card-title h2 {
+  color: #fff;
+  font-size: $body-lg;
+  font-weight: 600;
+  line-height: 1.33em;
+  margin-block-end: 10px;
+}
+
+.carousel .card-title span {
+  color: #ffffff99;
+  display: inline-block;
+  font-size: $body-sm;
+  margin-block-end: 0.71em;
+}
