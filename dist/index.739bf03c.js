@@ -596,7 +596,7 @@ rightCon.forEach((container)=>{
 const wrapper = document.querySelector(".wrapper");
 const carousel = document.querySelector(".carousel");
 const firstCardWidth = carousel.querySelector(".card").offsetWidth;
-const arrowBtns = document.querySelectorAll(".wrapper i");
+const arrowBtns = document.querySelectorAll(".portfolio-btn i");
 const carouselChildrens = [
     ...carousel.children
 ];
@@ -664,6 +664,17 @@ document.addEventListener("mouseup", dragStop);
 carousel.addEventListener("scroll", infiniteScroll);
 wrapper.addEventListener("mouseenter", ()=>clearTimeout(timeoutId));
 wrapper.addEventListener("mouseleave", autoPlay);
+//portfolio observer
+const portfolioItems = document.querySelectorAll(".portfolio-item");
+const portfolioObserver = new IntersectionObserver((entries)=>{
+    entries.forEach((entry)=>{
+        entry.target.classList.toggle("show", entry.isIntersecting);
+        if (entry.isIntersecting) portfolioObserver.unobserve(entry.target);
+    });
+});
+portfolioItems.forEach((item)=>{
+    portfolioObserver.observe(item);
+});
 
 },{"2182b4642506a29c":"kTqFQ"}],"kTqFQ":[function(require,module,exports) {
 module.exports = require("333a34b064479e0f")(require("f05d53e69cfee187").getBundleURL("g05j8") + "main.18dbc454.js" + "?" + Date.now()).catch((err)=>{

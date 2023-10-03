@@ -29,7 +29,7 @@ rightCon.forEach((container) => {
 const wrapper = document.querySelector('.wrapper');
 const carousel = document.querySelector('.carousel');
 const firstCardWidth = carousel.querySelector('.card').offsetWidth;
-const arrowBtns = document.querySelectorAll('.wrapper i');
+const arrowBtns = document.querySelectorAll('.portfolio-btn i');
 const carouselChildrens = [...carousel.children];
 
 let isDragging = false,
@@ -120,3 +120,18 @@ document.addEventListener('mouseup', dragStop);
 carousel.addEventListener('scroll', infiniteScroll);
 wrapper.addEventListener('mouseenter', () => clearTimeout(timeoutId));
 wrapper.addEventListener('mouseleave', autoPlay);
+
+//portfolio observer
+
+const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+const portfolioObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    entry.target.classList.toggle('show', entry.isIntersecting);
+    if (entry.isIntersecting) portfolioObserver.unobserve(entry.target);
+  });
+});
+
+portfolioItems.forEach((item) => {
+  portfolioObserver.observe(item);
+});

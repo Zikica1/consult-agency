@@ -798,6 +798,10 @@
 
 .element-portfolio-container {
   padding-inline: 2.1875em;
+
+  @include extraLargeSize {
+    display: flex;
+  }
 }
 
 .element-widget-container {
@@ -808,11 +812,26 @@
 }
 
 .element-portfolio-title {
-  text-align: center;
+  @include middleSize {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  @include extraLargeSize {
+    order: 2;
+    flex: 1 1 40%;
+    align-items: flex-start;
+  }
 }
 
 .element-portfolio-title .btn-primary {
   margin-block: 4.375em 2.18em;
+
+  @include extraLargeSize {
+    margin-block: 1.2em 2.18em;
+  }
 }
 
 .element-portfolio-title h2 {
@@ -823,61 +842,93 @@
   line-height: 1.28em;
   max-width: 9.09em;
   margin-inline: auto;
+
+  @include middleSize {
+    margin-block: 0;
+  }
+
+  @include extraLargeSize {
+    margin-inline: 0;
+    text-align: left;
+    font-size: $headline-md;
+  }
 }
 
-/* Carousel */
+.portfolio-btn.desktop-view {
+  display: none;
 
+  @include middleSize {
+    display: flex;
+    text-align: center;
+  }
+
+  @include largeSize {
+    margin-block: 1.75em;
+  }
+}
+
+.portfolio-btn.desktop-view i {
+  @include middleSize {
+    margin-inline-end: 1em;
+  }
+
+  @include largeSize {
+    width: 3.15em;
+    height: 3.15em;
+    line-height: 3.15em;
+    text-align: center;
+  }
+}
+/* Carousel */
 .wrapper {
   max-width: 1100px;
   width: 100%;
   position: relative;
+
+  @include extraLargeSize {
+    flex: 1 1 60%;
+    transform: translate(-10%, -60px);
+  }
 }
-.wrapper i {
+.portfolio-btn i {
   color: #fff;
   background: $gradient-5;
-  height: 50px;
-  width: 50px;
+  height: 2.5em;
+  width: 2.5em;
   cursor: pointer;
   font-size: 1.25rem;
-  // position: absolute;
   text-align: center;
-  line-height: 50px;
+  line-height: 2.5em;
   border-radius: 12px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
-  // transform: translateX(-50%);
   transition: transform 0.1s linear;
 }
-.wrapper i:active {
+.portfolio-btn i:active {
   transform: scale(0.85);
 }
 
-.portfolio-btn {
-  max-width: 9.375em;
-  margin-inline: auto;
-  margin-block: 4.375em 2.18em;
-  display: flex;
-  justify-content: space-between;
+.portfolio-btn.mobile-view {
+  @include middleSize {
+    display: none;
+  }
 }
 
 .wrapper .carousel {
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: calc((100% / 3) - 12px);
+  grid-auto-columns: calc((100% / 2) - 12px);
   overflow-x: auto;
   scroll-snap-type: x mandatory;
-  gap: 16px;
+  gap: 1em;
   border-radius: 8px;
   scroll-behavior: smooth;
   scrollbar-width: none;
 
-  @media screen and (max-width: 900px) {
-    grid-auto-columns: calc((100% / 2) - 9px);
-  }
-
-  @media screen and (max-width: 700px) {
-    grid-auto-columns: 100%;
+  @media (max-width: 600px) {
+    grid-auto-columns: calc(100%);
   }
 }
+
 .carousel::-webkit-scrollbar {
   display: none;
 }
@@ -900,14 +951,16 @@
 .carousel .card {
   position: relative;
   scroll-snap-align: start;
-  // height: 300px;
   width: 90%;
   list-style: none;
   background: #fff;
   cursor: pointer;
-  // padding-bottom: 15px;
   flex-direction: column;
   border-radius: 0 66px 0 127px;
+
+  @include largeSize {
+    border-radius: 0 126px 0 127px;
+  }
 }
 
 .carousel .card .img {
@@ -918,8 +971,11 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  // border: 4px solid #fff;
   border-radius: 0 66px 0 127px;
+
+  @include largeSize {
+    border-radius: 0 126px 0 127px;
+  }
 }
 
 .carousel .card-title {
@@ -927,9 +983,15 @@
   bottom: 0;
   right: -7%;
   background: $gradient-6;
-  padding: 15px 30px 10px 20px;
-  margin-block-end: 10px;
+  padding: 1.06em 1.875em 0.625em 1.25em;
+  margin-block-end: 0.625em;
   border-radius: 0 50px;
+  width: min(80%, 12.37em);
+
+  @include extraLargeSize {
+    width: min(100%, 17em);
+    height: 7.5em;
+  }
 }
 
 .carousel .card-title h2 {
@@ -938,6 +1000,11 @@
   font-weight: 600;
   line-height: 1.33em;
   margin-block-end: 10px;
+  white-space: nowrap;
+
+  @include extraLargeSize {
+    font-size: 1.75rem;
+  }
 }
 
 .carousel .card-title span {
@@ -945,4 +1012,151 @@
   display: inline-block;
   font-size: $body-sm;
   margin-block-end: 0.71em;
+
+  @include extraLargeSize {
+    font-size: $body-md;
+  }
+}
+
+.element-portfolio-call {
+  background-image: $gradient-5;
+  padding-block: 7.5em 5em;
+  padding-inline: 1.87em;
+  margin-inline: 2.187em;
+  margin-block-start: 9.375em;
+  border-top-right-radius: 6.25em;
+  border-bottom-left-radius: 6.25em;
+
+  @include middleSize {
+    padding-inline: 3.125em;
+    padding-block-end: 5.625em;
+  }
+
+  @include extraLargeSize {
+    display: flex;
+    gap: 2.5em;
+    padding: 7.5em 7.5em 10em 8.125em;
+  }
+}
+
+.portfolio-call-content {
+  opacity: 0;
+  transform: translateY(-50px);
+  transition: all 1s cubic-bezier(0.77, 0, 0.175, 1);
+
+  @include largeSize {
+    flex-basis: 40%;
+  }
+}
+
+.portfolio-call-content.show {
+  opacity: 1;
+  transform: none;
+}
+
+.portfolio-call-content h2 {
+  color: #fff;
+  font-size: $title-lg;
+  font-weight: 600;
+  line-height: 1.24em;
+
+  @include largeSize {
+    font-size: $headline-md;
+  }
+}
+
+.portfolio-call-content p {
+  font-size: $body-sm;
+  margin-block: 2.5em 1em;
+  color: #ffffff80;
+
+  @include largeSize {
+    font-size: $body-md;
+  }
+}
+
+.form-portfolio {
+  margin-block-start: 3.125em;
+  opacity: 0;
+  transform: translateY(70px);
+  transition: all 1s cubic-bezier(0.77, 0, 0.175, 1);
+
+  @include largeSize {
+    flex-basis: 60%;
+  }
+}
+
+.form-portfolio.show {
+  opacity: 1;
+  transform: none;
+}
+
+.form-portfolio :is(.col-1, .col-2) {
+  @include middleSize {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1em;
+    width: 75%;
+  }
+
+  @include largeSize {
+    width: unset;
+  }
+}
+
+.form-portfolio :where(.col-1, .col-2) > div {
+  margin-block: 1.56em;
+
+  @include largeSize {
+    margin-block: 1em;
+  }
+}
+
+.form-portfolio label {
+  position: absolute;
+  left: -1000px;
+}
+
+.form-portfolio input:not(input[type='submit']) {
+  color: #ccc;
+  background-color: #0a347e;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  padding: 1.14em 1.43em;
+  font-size: $body-sm;
+  font-family: inherit;
+  font-weight: 600;
+
+  @include smallSize {
+    max-width: 17.86em;
+  }
+
+  @include largeSize {
+    max-width: unset;
+  }
+}
+
+.form-portfolio input[type='submit'] {
+  color: $color-first;
+  background-image: $gradient-1;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  padding: 1.14em 1.42em;
+  margin-block-start: 1.78em;
+  text-transform: uppercase;
+  font-family: inherit;
+  font-size: $body-sm;
+  font-weight: 400;
+  cursor: pointer;
+
+  @include middleSize {
+    margin-block-start: 0;
+  }
+}
+
+.form-portfolio input::placeholder {
+  color: #ffffff80;
 }

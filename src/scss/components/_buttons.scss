@@ -84,3 +84,16 @@
 .btn-gradient-2:hover .btn-text-2 {
   color: $color-first;
 }
+
+/* portfolio */
+.portfolio-btn {
+  max-width: 9.375em;
+  margin-inline: auto;
+  margin-block: 4.375em 2.18em;
+  display: flex;
+  justify-content: space-between;
+
+  @include middleSize {
+    margin-inline: unset;
+  }
+}
