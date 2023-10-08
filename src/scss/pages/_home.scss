@@ -1160,3 +1160,302 @@
 .form-portfolio input::placeholder {
   color: #ffffff80;
 }
+
+/* Choose us */
+.choose-us {
+  position: relative;
+  margin-block-start: 9.375em;
+  padding-inline: 2.185em;
+}
+
+.choose-us-container {
+  @include largeSize {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1.5em;
+  }
+}
+
+.choose-us-left-col h2 {
+  color: $color-first;
+  font-size: $title-lg;
+  font-weight: 600;
+  line-height: 1.24;
+  margin-block: 0.24em 1em;
+
+  @include extraLargeSize {
+    font-size: $headline-md;
+  }
+}
+
+.choose-us-left-col h2 + p {
+  font-size: $body-sm;
+  line-height: 1.43em;
+  margin-block-end: 1em;
+
+  @include extraLargeSize {
+    font-size: $body-md;
+  }
+}
+
+.choose-us-left-col ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+  margin-block-start: 3em;
+}
+
+.choose-us-left-col li {
+  position: relative;
+  padding-left: 2.5em;
+  margin-block-end: 1.5em;
+}
+
+.choose-us-left-col li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 1.87em;
+  height: 1.81em;
+}
+
+.choose-us-left-col li:nth-child(1)::before {
+  background: url(../img/choose-us-img-1.png) no-repeat center center/cover;
+}
+.choose-us-left-col li:nth-child(2)::before {
+  background: url(../img/choose-us-img-2.png) no-repeat center center/cover;
+}
+.choose-us-left-col li:nth-child(3)::before {
+  background: url(../img/choose-us-img-3.png) no-repeat center center/cover;
+}
+
+.choose-us-left-col li h3 {
+  color: $color-first;
+  font-size: $title-md;
+  font-weight: 500;
+  line-height: 1.38em;
+}
+
+.choose-us-left-col li p {
+  font-size: $body-sm;
+  margin-block-start: 0.5em;
+}
+
+.choose-us-widget-img {
+  margin-block: 3.125em 20%;
+}
+
+.choose-us-widget-img img {
+  border-radius: 0 95px;
+}
+
+.choose-us-shape-container {
+  display: flex;
+  position: absolute;
+  right: -1.25em;
+  bottom: 2%;
+
+  @media (max-width: 26.56rem) {
+    right: -2.5em;
+  }
+  @include largeSize {
+    bottom: 20%;
+  }
+}
+
+.choose-us-shape-1 {
+  position: relative;
+  z-index: 3;
+  transform: translate(50%, 100px);
+}
+
+.choose-us-shape-1 > img:nth-child(1) {
+  @media (max-width: 26.56rem) {
+    width: 4.87em;
+    height: 4.87em;
+  }
+}
+
+.choose-us-shape-2 > *:nth-child(1) {
+  position: relative;
+  z-index: 1;
+  top: 1.25em;
+
+  @include extraLargeSize {
+    z-index: -1;
+    top: 0;
+  }
+}
+
+.choose-us-shape-2 img:nth-child(2) {
+  position: relative;
+  z-index: 2;
+
+  @include extraLargeSize {
+    right: -3em;
+  }
+}
+
+/* Our pricing */
+.our-pricing {
+  margin-block-start: 9.375em;
+}
+
+.our-pricing-container {
+  padding-inline: 2.187em;
+  padding-block-start: 4.37em;
+}
+
+.our-pricing .wave-img {
+  position: absolute;
+  z-index: -1;
+  height: auto;
+}
+
+.our-pricing-title {
+  max-width: 90%;
+  margin-inline: auto;
+}
+
+.our-pricing-title > div {
+  display: flex;
+  align-items: flex-start;
+}
+
+.pricing-title-img {
+  margin-inline-end: 3em;
+  transform: rotate(15deg);
+}
+
+.our-pricing-title .btn-primary {
+  margin-block: 0;
+}
+
+.our-pricing-title h2 {
+  color: $color-first;
+  font-size: $title-lg;
+  margin-block: 0.24em 0.48em;
+  text-align: center;
+}
+
+.our-pricing-wrapper {
+  margin-block-start: 6.25em;
+}
+
+.our-pricing-card {
+  display: grid;
+  place-items: center;
+}
+
+.our-pricing-card:not(:last-child) {
+  margin-block-end: 2.19em;
+}
+
+.our-pricing-card-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: min(100%, 400px);
+}
+
+.pricing-inner-head {
+  width: 100%;
+  position: relative;
+}
+
+.pricing-inner-head .pricing-green-rec-img {
+  width: 100%;
+  height: 100%;
+}
+
+.pricing-inner-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  text-align: center;
+}
+
+.card-price {
+  display: inline-flex;
+  flex-direction: column;
+  background-image: $gradient-1;
+  padding-inline: 2.25em;
+  padding-block: 0.5em;
+  text-align: center;
+  border-radius: 12px;
+  transform: translateY(-50%);
+}
+
+.card-price h3 {
+  color: $color-first;
+  font-size: 2.25rem;
+  font-weight: 500;
+  margin-block-end: 0.22em;
+}
+
+.card-price h4 {
+  color: $color-first;
+  font-size: $body-md;
+  font-weight: 500;
+}
+
+.pricing-inner-text {
+  color: #ffffff;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.pricing-inner-text h3 {
+  font-size: 2.25rem;
+  margin-block-end: 0.42em;
+}
+
+.pricing-inner-text p {
+  font-size: $body-sm;
+  font-weight: 500;
+}
+
+.pricing-inner-content img {
+  width: 75%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  position: relative;
+  transform: translate(5%, -30%);
+  z-index: 1;
+}
+
+.pricing-inner-body {
+  position: relative;
+  z-index: -1;
+  width: 90%;
+  text-align: center;
+  border-radius: 30px;
+  padding-block: 100px 35px;
+  box-shadow: 0 7px 35px 0 rgba(0, 0, 0, 0.2);
+  transform: translateY(-14%);
+}
+
+.pricing-inner-body ul {
+  margin-block-end: 35px;
+}
+
+.pricing-inner-body ul li {
+  font-size: 16px;
+  margin-block-start: 10px;
+  padding-block-end: 10px;
+}
+
+.our-pricing-card-2 .card-price {
+  background-image: $gradient-6;
+}
+
+.our-pricing-card-2 .card-price :is(h3, h4) {
+  color: #fff;
+}
+
+.our-pricing-card-2 .pricing-inner-text :is(h3, p) {
+  color: $color-first;
+}
