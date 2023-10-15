@@ -497,17 +497,21 @@ img, svg {
   overflow: hidden;
 }
 
-.hero:before {
-  content: "";
+.hero .hero-background {
   z-index: -1;
   background-image: linear-gradient(354deg, #efefef 0%, #f9f9f9 100%);
   border-bottom-right-radius: 300px;
   width: 95vw;
   height: 98%;
   margin: 0 calc(30% - 40vw);
+  transition: all 1.5s;
   position: absolute;
   top: 0;
   left: 0;
+}
+
+.hero .grey-circle {
+  transition: all 1s;
 }
 
 .hero-container {
@@ -1942,15 +1946,20 @@ img, svg {
 .our-pricing-title {
   max-width: 90%;
   margin-inline: auto;
+  position: relative;
 }
 
 .our-pricing-title > div {
-  align-items: flex-start;
-  display: flex;
+  place-items: center;
+  row-gap: .5em;
+  display: grid;
 }
 
 .pricing-title-img {
   margin-inline-end: 3em;
+  position: absolute;
+  top: 0;
+  left: 0;
   transform: rotate(15deg);
 }
 
@@ -1963,10 +1972,25 @@ img, svg {
   text-align: center;
   margin-block: .24em .48em;
   font-size: 2.06rem;
+  font-weight: 600;
+}
+
+@media (width >= 56.25rem) {
+  .our-pricing-title h2 {
+    font-size: 2.8125rem;
+  }
 }
 
 .our-pricing-wrapper {
   margin-block-start: 6.25em;
+}
+
+@media (width >= 56.25rem) {
+  .our-pricing-wrapper {
+    grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+    column-gap: 1em;
+    display: grid;
+  }
 }
 
 .our-pricing-card {
@@ -1978,7 +2002,14 @@ img, svg {
   margin-block-end: 2.19em;
 }
 
+@media (width >= 56.25rem) {
+  .our-pricing-card:not(:last-child) {
+    margin-block-end: 0;
+  }
+}
+
 .our-pricing-card-inner {
+  isolation: isolate;
   flex-direction: column;
   align-items: center;
   width: min(100%, 400px);
@@ -2022,10 +2053,22 @@ img, svg {
   font-weight: 500;
 }
 
+@media (width >= 56.25rem) {
+  .card-price h3 {
+    font-size: 2.8125rem;
+  }
+}
+
 .card-price h4 {
   color: #00276a;
   font-size: 1rem;
   font-weight: 500;
+}
+
+@media (width >= 56.25rem) {
+  .card-price h4 {
+    font-size: 1.125rem;
+  }
 }
 
 .pricing-inner-text {
@@ -2038,6 +2081,12 @@ img, svg {
 .pricing-inner-text h3 {
   margin-block-end: .42em;
   font-size: 2.25rem;
+}
+
+@media (width >= 56.25rem) {
+  .pricing-inner-text h3 {
+    font-size: 2.75rem;
+  }
 }
 
 .pricing-inner-text p {
@@ -2058,7 +2107,7 @@ img, svg {
   z-index: -1;
   text-align: center;
   border-radius: 30px;
-  width: 90%;
+  width: min(90%, 21.25em);
   padding-block: 100px 35px;
   position: relative;
   transform: translateY(-14%);
@@ -2085,6 +2134,203 @@ img, svg {
 
 .our-pricing-card-2 .pricing-inner-text :is(h3, p) {
   color: #00276a;
+}
+
+.testimonial {
+  margin-block-start: 9.375em;
+  padding-inline: 2.19em;
+}
+
+.testimonial-title {
+  text-align: center;
+}
+
+.testimonial-title h2 {
+  color: #00276a;
+  list-style: 1.26em;
+  font-size: 1.875rem;
+  font-weight: 600;
+}
+
+@media (width >= 56.25rem) {
+  .testimonial-title h2 {
+    font-size: 2.8125rem;
+  }
+}
+
+.testimonial-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin-block: 4.375em;
+  margin-inline: auto;
+  position: relative;
+}
+
+.testimonial-carousel {
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  border-radius: 8px;
+  grid-auto-columns: calc(33.3333% - 12px);
+  grid-auto-flow: column;
+  gap: 16px;
+  padding-block: 70px;
+  display: grid;
+  overflow-x: auto;
+}
+
+@media (width <= 900px) {
+  .testimonial-carousel {
+    grid-auto-columns: calc(50% - 10px);
+  }
+}
+
+@media (width <= 600px) {
+  .testimonial-carousel {
+    grid-auto-columns: 100%;
+  }
+}
+
+@media (width >= 56.25rem) {
+  .testimonial-carousel {
+    gap: 48px;
+  }
+}
+
+.testimonial-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.testimonial-carousel.no-transition {
+  scroll-behavior: auto;
+}
+
+.testimonial-carousel.dragging {
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+}
+
+.testimonial-carousel.dragging .testimonial-card {
+  cursor: grab;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.testimonial-card {
+  scroll-snap-align: start;
+  isolation: isolate;
+  border-radius: 50px 0;
+  width: 95%;
+  padding: 55px 30px 40px 40px;
+  position: relative;
+  box-shadow: 0 11px 25px #0000001a;
+}
+
+.testimonial-card:before {
+  content: "";
+  z-index: -1;
+  opacity: 0;
+  background-image: linear-gradient(#00276a 0%, #2c63c2 100%);
+  border-radius: 50px 0;
+  height: 100%;
+  transition: all .35s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.testimonial-card:hover:before {
+  opacity: 1;
+}
+
+.testimonial-card:hover p {
+  color: #fff;
+}
+
+.testimonial-card-content > p {
+  color: #2c63c2;
+  margin-block-end: 1em;
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 1.37em;
+}
+
+.testimonial-card-content > p:before {
+  content: "";
+  background-image: linear-gradient(#fcad25 0%, #ffe046 100%);
+  border-radius: 16px;
+  width: 4.875em;
+  height: 4.875em;
+  position: absolute;
+  top: -3.235em;
+  left: 2.5em;
+}
+
+.testimonial-card-content > p:after {
+  content: "";
+  background-color: #0000;
+  background-image: url("quotation-marks.79276eef.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 4.875em;
+  height: 4.875em;
+  position: absolute;
+  top: -3.235em;
+  left: 2.5em;
+}
+
+.testimonial-card-content .client-name {
+  align-items: flex-end;
+  display: flex;
+}
+
+.testimonial-card-content .client-name p {
+  color: #00276a;
+  text-transform: uppercase;
+  opacity: .9;
+  margin-inline-start: .5em;
+  font-weight: 600;
+}
+
+.testimonial-card:hover .client-name p {
+  color: #fff;
+}
+
+.testimonial-card-content .profile-img {
+  width: 140px;
+  height: 140px;
+  position: absolute;
+  bottom: -60px;
+  right: 40px;
+}
+
+.testimonial-btns {
+  justify-content: center;
+  display: flex;
+}
+
+.testimonial-btns i {
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+  background-image: linear-gradient(135deg, #00276a 0%, #2c63c2 100%);
+  border-radius: 12px;
+  width: 50px;
+  height: 50px;
+  margin-right: 24px;
+  font-size: 1.25rem;
+  line-height: 50px;
+  transition: transform .2s linear;
+}
+
+.testimonial-btns i:last-child {
+  margin-right: 0;
+}
+
+.testimonial-btns i:active {
+  transform: scale(.85);
 }
 
 /*# sourceMappingURL=index.b10d73a7.css.map */

@@ -25,6 +25,37 @@ rightCon.forEach((container) => {
   herObserver.observe(container);
 });
 
+//hero-background
+gsap.registerPlugin(ScrollTrigger);
+
+ScrollTrigger.matchMedia({
+  '(min-width: 900px)': function () {
+    gsap.to('.hero-background', {
+      scrollTrigger: {
+        trigger: '.hero-background',
+        start: '70% 90%',
+        end: 'bottom 70%',
+        scrub: true,
+        markers: false,
+      },
+      x: -200,
+      duration: 1,
+    });
+
+    gsap.from('.grey-circle', {
+      scrollTrigger: {
+        trigger: '.grey-circle',
+        start: 'top 80%',
+        end: '50% 50%',
+        scrub: true,
+        markers: false,
+      },
+      x: 250,
+      duration: 0.5,
+    });
+  },
+});
+
 //Carousel
 const wrapper = document.querySelector('.wrapper');
 const carousel = document.querySelector('.carousel');
@@ -135,3 +166,71 @@ const portfolioObserver = new IntersectionObserver((entries) => {
 portfolioItems.forEach((item) => {
   portfolioObserver.observe(item);
 });
+
+//Testimonial
+
+const carouselTes = document.querySelector('.testimonial-carousel');
+const buttonArrows = document.querySelectorAll('.testimonial-btns i');
+const firstCard = document.querySelector('.testimonial-card').offsetWidth;
+const carouselTesChildrens = [...carouselTes.children];
+
+let isDraggingTes = false,
+  startX2,
+  startScrollLeft2;
+
+let cardPerView2 = Math.round(carouselTes.offsetWidth / firstCard);
+
+carouselTesChildrens
+  .slice(-cardPerView2)
+  .reverse()
+  .forEach((card) => {
+    carouselTes.insertAdjacentHTML('afterbegin', card.outerHTML);
+  });
+
+carouselTesChildrens.slice(0, cardPerView2).forEach((card) => {
+  carouselTes.insertAdjacentHTML('beforeend', card.outerHTML);
+});
+
+buttonArrows.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    carouselTes.scrollLeft += btn.id == 'left' ? -firstCard : firstCard;
+  });
+});
+
+const dragStart2 = (e) => {
+  isDraggingTes = true;
+  carouselTes.classList.add('dragging');
+  startX2 = e.pageX;
+  startScrollLeft2 = carouselTes.scrollLeft;
+};
+
+const dragging2 = (e) => {
+  if (!isDraggingTes) return;
+  carouselTes.scrollLeft = startScrollLeft2 - (e.pageX - startX2);
+};
+
+const dragStop2 = (e) => {
+  isDraggingTes = false;
+  carouselTes.classList.remove('dragging');
+};
+
+const infiniteScroll2 = () => {
+  if (carouselTes.scrollLeft === 0) {
+    carouselTes.classList.add['no-transition'];
+    carouselTes.scrollLeft =
+      carouselTes.scrollWidth - 2 * carouselTes.offsetWidth;
+    carouselTes.classList.remove['no-transition'];
+  } else if (
+    Math.ceil(carouselTes.scrollLeft) ===
+    carouselTes.scrollWidth - carouselTes.offsetWidth
+  ) {
+    carouselTes.classList.add['no-transition'];
+    carouselTes.scrollLeft = carouselTes.offsetWidth;
+    carouselTes.classList.remove['no-transition'];
+  }
+};
+
+carouselTes.addEventListener('mousedown', dragStart2);
+carouselTes.addEventListener('mousemove', dragging2);
+document.addEventListener('mouseup', dragStop2);
+carouselTes.addEventListener('scroll', infiniteScroll2);

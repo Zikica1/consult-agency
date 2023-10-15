@@ -11,6 +11,14 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
+      defer
+    ></script>
     <script type="module" src="js/index.js"></script>
     <title>Document</title>
   </head>
@@ -75,6 +83,7 @@
 
     <!--hero section-->
     <section class="hero">
+      <div class="hero-background"></div>
       <div class="hero-container">
         <div class="hero-left-col">
           <img class="circle-bl-1" src="img/circle-blue-3.svg" alt="" />
@@ -531,25 +540,29 @@
     <section class="choose-us">
       <div class="choose-us-container">
         <div class="choose-us-left-col">
-          <h3 class="btn-primary">why choose us</h3>
-          <h2>
-            We're a global stakeholder relations and partnership building
-            consultancy.
-          </h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
-            dolores qui debitis natus provident veritatis quia placeat.
-          </p>
+          <h3 class="btn-primary btn-primary-ani">why choose us</h3>
+          <div class="choose-us-text-ani">
+            <h2>
+              We're a global stakeholder relations and partnership building
+              consultancy.
+            </h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Distinctio dolores qui debitis natus provident veritatis quia
+              placeat.
+            </p>
+          </div>
+
           <ul>
-            <li>
+            <li class="item-ani">
               <h3>Creative Ideas</h3>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
             </li>
-            <li>
+            <li class="item-ani">
               <h3>Experienced Advisors</h3>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
             </li>
-            <li>
+            <li class="item-ani">
               <h3>Risk Management</h3>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
             </li>
@@ -579,15 +592,15 @@
       <img class="wave-img" src="img/wave.svg" alt="" />
       <div class="our-pricing-container">
         <div class="our-pricing-title">
+          <img
+            class="pricing-title-img"
+            src="img/our-pricing-rectangle-img.svg"
+            alt=""
+          />
           <div>
-            <img
-              class="pricing-title-img"
-              src="img/our-pricing-rectangle-img.svg"
-              alt=""
-            />
             <h3 class="btn-primary">our pricing</h3>
+            <h2>Choose your pricing plan</h2>
           </div>
-          <h2>Choose your pricing plan</h2>
         </div>
         <div class="our-pricing-wrapper">
           <div class="our-pricing-card our-pricing-card-1">
@@ -638,7 +651,7 @@
 
                 <div class="pricing-inner-content">
                   <div class="card-price">
-                    <h3>$29</h3>
+                    <h3>$79</h3>
                     <h4>/mo</h4>
                   </div>
                   <div class="pricing-inner-text">
@@ -675,7 +688,7 @@
 
                 <div class="pricing-inner-content">
                   <div class="card-price">
-                    <h3>$29</h3>
+                    <h3>$49</h3>
                     <h4>/mo</h4>
                   </div>
                   <div class="pricing-inner-text">
@@ -701,6 +714,75 @@
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Testimonial-->
+    <section class="testimonial">
+      <div class="testimonial-title">
+        <h3 class="btn-primary">testimonial</h3>
+        <h2>What Our Client Says</h2>
+      </div>
+
+      <div class="testimonial-wrapper">
+        <ul class="testimonial-carousel">
+          <li class="testimonial-card">
+            <div class="testimonial-card-content">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
+                labore illo sint blanditiis architecto quo nostrum asperiores,
+                autem, quaerat quam facere! Perferendis delectus sint odio!
+              </p>
+              <div class="client-name">
+                <img src="img/testimonial-green-img.svg" alt="" />
+                <p>nik smith</p>
+              </div>
+
+              <div class="profile-img">
+                <img src="img/testimonial-img-1.png" alt="" />
+              </div>
+            </div>
+          </li>
+          <li class="testimonial-card">
+            <div class="testimonial-card-content">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
+                labore illo sint blanditiis architecto quo nostrum asperiores,
+                autem, quaerat quam facere! Perferendis delectus sint odio!
+              </p>
+              <div class="client-name">
+                <img src="img/testimonial-green-img.svg" alt="" />
+                <p>amanda black</p>
+              </div>
+
+              <div class="profile-img">
+                <img src="img/testimonial-img-2.png" alt="" />
+              </div>
+            </div>
+          </li>
+          <li class="testimonial-card">
+            <div class="testimonial-card-content">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
+                labore illo sint blanditiis architecto quo nostrum asperiores,
+                autem, quaerat quam facere! Perferendis delectus sint odio!
+              </p>
+              <div class="client-name">
+                <img src="img/testimonial-green-img.svg" alt="" />
+                <p>amanda black</p>
+              </div>
+
+              <div class="profile-img">
+                <img src="img/testimonial-img-3.png" alt="" />
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <div class="testimonial-btns">
+          <i id="left" class="fa-solid fa-angle-left"></i>
+          <i id="right" class="fa-solid fa-angle-right"></i>
         </div>
       </div>
     </section>
