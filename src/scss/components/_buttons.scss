@@ -97,3 +97,25 @@
     margin-inline: unset;
   }
 }
+
+/* Footer */
+.btn-gradient-3 {
+  color: $color-second;
+  border: none;
+  background-color: none;
+  background-image: $gradient-6;
+  text-transform: uppercase;
+  padding: 12px 30px;
+  margin-block-start: 1em;
+  border-radius: 0.94em;
+  cursor: pointer;
+  transition: transform 0.35s ease;
+
+  @include largeSize {
+    padding: 15px 34px;
+  }
+}
+
+.btn-gradient-3:hover {
+  transform: scale(0.98);
+}

@@ -238,13 +238,15 @@
     <section class="element-about">
       <div class="element-about-inner">
         <div class="element-col-left">
-          <h3 class="btn-primary">About us</h3>
-          <h2><span>Wireframe and Design Starter Service</span></h2>
-          <p class="text-col-left">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto odit
-            beatae at neque asperiores quos maiores accusantium, reprehenderit
-            iste ex, optio magnam. Aut, nam magni!
-          </p>
+          <h3 class="btn-primary about-el-btn">About us</h3>
+          <div class="element-col-text">
+            <h2><span>Wireframe and Design Starter Service</span></h2>
+            <p class="text-col-left">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+              odit beatae at neque asperiores quos maiores accusantium,
+              reprehenderit iste ex, optio magnam. Aut, nam magni!
+            </p>
+          </div>
 
           <button class="btn-gradient btn-gradient-2">
             <span class="btn-text btn-text-2">read more</span>
@@ -358,7 +360,7 @@
           <h2>We provide best service that grow your work</h2>
         </div>
 
-        <p>
+        <p class="element-service-text">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
           explicabo ex aspernatur voluptatibus maxime laborum voluptate nobis.
           Numquam quis et assumenda fuga, quaerat odio? Voluptates!
@@ -422,12 +424,19 @@
     <section class="element-portfolio">
       <div class="element-widget-container">
         <img src="img/hero-rectangle-green-2.svg" alt="" />
-        <img src="img/hero-half-circle-blue.png" alt="" />
+        <img
+          class="widget-img-circle"
+          src="img/hero-half-circle-blue.png"
+          alt=""
+        />
       </div>
       <div class="element-portfolio-container">
         <div class="element-portfolio-title">
-          <h3 class="btn-primary">portfolio</h3>
-          <h2>Our Cases & Business Marketing</h2>
+          <div class="element-portfolio-text">
+            <h3 class="btn-primary">portfolio</h3>
+            <h2>Our Cases & Business Marketing</h2>
+          </div>
+
           <div class="portfolio-btn desktop-view">
             <i id="left" class="fa-solid fa-angle-left"></i>
             <i id="right" class="fa-solid fa-angle-right"></i>
@@ -546,7 +555,7 @@
               We're a global stakeholder relations and partnership building
               consultancy.
             </h2>
-            <p>
+            <p class="choose-text-ani">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Distinctio dolores qui debitis natus provident veritatis quia
               placeat.
@@ -576,11 +585,22 @@
           <div class="choose-us-shape-container">
             <div class="choose-us-shape-1">
               <img src="img/rectangle-green-ch-2.png" alt="" />
-              <img src="img/half-circle-green-ch.png" alt="" />
+              <img
+                class="choose-us-shape-ani-3"
+                src="img/half-circle-green-ch.png"
+                alt=""
+              />
             </div>
             <div class="choose-us-shape-2">
-              <img src="img/Rectangle-green-ch.png" alt="" />
-              <img src="img/half-circle-blue-ch.png" />
+              <img
+                class="choose-us-shape-ani-1"
+                src="img/Rectangle-green-ch.png"
+                alt=""
+              />
+              <img
+                class="choose-us-shape-ani-2"
+                src="img/half-circle-blue-ch.png"
+              />
             </div>
           </div>
         </div>
@@ -786,5 +806,92 @@
         </div>
       </div>
     </section>
+
+    <!--Footer-->
+    <footer class="footer">
+      <div class="footer-inner">
+        <img
+          class="footer-circle-blue"
+          src="img/footer-half-circle-blue.png"
+          alt=""
+        />
+        <div class="footer-widget">
+          <h2>Looking for a first-class business consultant?</h2>
+          <button class="btn-gradient-3">
+            <span class="btn-text-3">get a quote</span>
+          </button>
+
+          <img
+            src="img/footer-hal-cirle.png"
+            alt=""
+            class="footer-widg-img footer-widg-img-left"
+          />
+          <img
+            src="img/footer-hal-cirle.png"
+            alt=""
+            class="footer-widg-img footer-widg-img-right"
+          />
+        </div>
+
+        <div class="footer-content">
+          <div class="footer-contact-location">
+            <h2>ConsultAgency</h2>
+            <div>
+              <img src="img/footer-location-icon.png" alt="" />
+              <p>125 Johan Street <br />New Yor, USA</p>
+            </div>
+            <div>
+              <img src="img/footer-headphones-icon.png" alt="" />
+              <p>4-498-679-2309</p>
+            </div>
+          </div>
+          <div class="footer-extra-links">
+            <h3>Extra links</h3>
+            <div class="footer-extra-list">
+              <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Project</a></li>
+              </ul>
+              <ul>
+                <li><a href="#">Team</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Our approach</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-open-hours">
+            <h3>Open Hours:</h3>
+            <p>Mon-Sat: 8 am - 5 pm,</p>
+            <p>Sunday: CLOSED</p>
+          </div>
+          <div class="footer-newsletter">
+            <h3>Newsletter</h3>
+            <p>Send us a newsletter to get update</p>
+            <form action="">
+              <input
+                type="email"
+                placeholder="Your Email"
+                name=""
+                id=""
+                required
+              />
+              <button type="submit">
+                <span>submit</span>
+              </button>
+            </form>
+          </div>
+        </div>
+        <img
+          class="footer-img-yellow"
+          src="img/footer-half-circle-yellow.png"
+          alt=""
+        />
+
+        <img class="footer-shadow-img" src="img/footer-svg.png" alt="" />
+      </div>
+    </footer>
   </body>
 </html>

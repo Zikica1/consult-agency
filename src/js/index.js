@@ -56,6 +56,173 @@ ScrollTrigger.matchMedia({
   },
 });
 
+//about element
+const tl = gsap.timeline({
+  scrollTrigger: {
+    trigger: '.element-col-left',
+    start: 'top 75%',
+    end: 'top 50%',
+    markers: false,
+    scrub: false,
+  },
+});
+
+tl.from('.about-el-btn', {
+  opacity: 0,
+  y: -20,
+  duration: 1,
+  ease: 'back.out(1.7)',
+})
+  .from(
+    '.element-col-text',
+    {
+      opacity: 0,
+      y: -20,
+      duration: 1,
+    },
+    '-=0.5'
+  )
+  .from(
+    '.btn-gradient-2',
+    {
+      opacity: 0,
+      y: -20,
+      duration: 1,
+    },
+    '-=0.5'
+  );
+
+//service element
+const tl2 = gsap.timeline({
+  scrollTrigger: {
+    trigger: '.element-services-content',
+    start: 'top 70%',
+    end: 'top 50%',
+    markers: false,
+    scrub: false,
+  },
+});
+
+tl2
+  .from('.element-service-title', {
+    opacity: 0,
+    y: -20,
+    duration: 1,
+  })
+  .from('.element-service-text', {
+    opacity: 0,
+    y: -20,
+    duration: 1,
+  });
+
+//portfolio element
+const tl3 = gsap.timeline({
+  scrollTrigger: {
+    trigger: '.element-portfolio-text',
+    start: 'top 50%',
+    end: 'top 40%',
+    markers: false,
+    scrub: false,
+  },
+});
+
+tl3
+  .from('.element-portfolio-text', {
+    opacity: 0,
+    y: -30,
+    duration: 1,
+  })
+  .from(
+    '.widget-img-circle',
+    {
+      y: 180,
+      duration: 1.5,
+    },
+    '-=1'
+  );
+
+//choose us element
+const tl4 = gsap.timeline({
+  scrollTrigger: {
+    trigger: '.choose-us-left-col',
+    start: 'top 70%',
+    end: 'top 40%',
+    markers: false,
+    scrub: false,
+  },
+});
+
+tl4
+  .from('.btn-primary-ani', {
+    y: -30,
+    opacity: 0,
+    duration: 1,
+  })
+  .from('.choose-us-text-ani', {
+    y: -30,
+    opacity: 0,
+    duration: 1,
+  });
+
+gsap.from('.item-ani', {
+  scrollTrigger: {
+    trigger: '.choose-text-ani',
+    start: '100% 50%',
+    end: 'bottom 40%',
+    markers: false,
+    scrub: false,
+  },
+  y: -30,
+  opacity: 0,
+  duration: 1,
+  ease: 'power2.out',
+  stagger: 0.6,
+});
+
+const tl5 = gsap.timeline({
+  scrollTrigger: {
+    trigger: '.choose-us-right-col',
+    start: 'top 60%',
+    end: 'top 50%',
+    markers: false,
+    scrub: false,
+  },
+});
+
+tl5
+  .from('.choose-us-widget-img', {
+    opacity: 0,
+    x: -150,
+    duration: 1.5,
+  })
+  .from(
+    '.choose-us-shape-ani-1',
+    {
+      opacity: 0,
+      y: 110,
+      duration: 1,
+    },
+    '-=0.5'
+  )
+  .from(
+    '.choose-us-shape-ani-2',
+    {
+      opacity: 0,
+      y: 50,
+      duration: 1,
+    },
+    '-=0.4'
+  )
+  .from(
+    '.choose-us-shape-ani-3',
+    {
+      opacity: 0,
+      x: -110,
+      duration: 1,
+    },
+    '-=0.4'
+  );
+
 //Carousel
 const wrapper = document.querySelector('.wrapper');
 const carousel = document.querySelector('.carousel');

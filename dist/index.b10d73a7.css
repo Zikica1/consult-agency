@@ -492,6 +492,265 @@ img, svg {
   }
 }
 
+.btn-gradient-3 {
+  color: #ffe046;
+  background-color: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  background-image: linear-gradient(45deg, #2c63c2 0%, #00276a 100%);
+  border: none;
+  border-radius: .94em;
+  margin-block-start: 1em;
+  padding: 12px 30px;
+  transition: transform .35s;
+}
+
+@media (width >= 56.25rem) {
+  .btn-gradient-3 {
+    padding: 15px 34px;
+  }
+}
+
+.btn-gradient-3:hover {
+  transform: scale(.98);
+}
+
+.footer {
+  margin-block-start: 9.375em;
+  padding-block-start: 9.375em;
+  padding-inline: 2.19em;
+  font-size: 1.06rem;
+  position: relative;
+}
+
+.footer-circle-blue {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-95%, -95%);
+}
+
+.footer-inner {
+  color: #fff;
+  background-image: linear-gradient(135deg, #06b598 0%, #2ae5c5 100%);
+  border-radius: 0 6.25em;
+  padding-block: 7.5em 6.25em;
+  padding-inline: 1.25em 1.875em;
+  position: relative;
+}
+
+@media (width >= 48rem) {
+  .footer-inner {
+    padding-inline: 5em 1.875em;
+  }
+}
+
+.footer-widget {
+  z-index: 1;
+  isolation: isolate;
+  background-image: linear-gradient(#fcad25 0%, #ffe046 100%);
+  border-radius: 1.5em;
+  width: 70%;
+  padding: 3.125em 1.25em;
+  position: absolute;
+  left: 12%;
+  transform: translateY(-115%);
+}
+
+@media (width >= 56.25rem) {
+  .footer-widget {
+    width: 85%;
+    left: 5%;
+  }
+}
+
+@media (width >= 65.375rem) {
+  .footer-widget {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+  }
+}
+
+.footer-widget h2 {
+  color: #00276a;
+  font-size: 1.3125rem;
+  font-weight: 600;
+  line-height: 1.35em;
+}
+
+@media (width >= 65.375rem) {
+  .footer-widget h2 {
+    font-size: 1.5rem;
+  }
+}
+
+.footer-widget img {
+  position: absolute;
+}
+
+.footer-widget .footer-widg-img-left {
+  bottom: 15px;
+  left: -1.875em;
+}
+
+.footer-widget .footer-widg-img-right {
+  bottom: -3.437em;
+  right: -.625em;
+}
+
+.footer-content {
+  grid-template-columns: 1fr;
+  align-items: start;
+  row-gap: 3.5em;
+  margin-block-start: 3.5em;
+  display: grid;
+}
+
+@media (width >= 48rem) {
+  .footer-content {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1.5em;
+  }
+}
+
+@media (width >= 65.375rem) {
+  .footer-content {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.footer-content h3 {
+  margin-block-end: 1.66em;
+  font-size: 1.5rem;
+  line-height: 1.33em;
+}
+
+.footer-contact-location h2 {
+  letter-spacing: 1px;
+  margin-block-end: 1em;
+  font-size: 2.06rem;
+  font-weight: 500;
+}
+
+.footer-contact-location > div {
+  margin-block-end: 2em;
+  display: flex;
+}
+
+.footer-contact-location > div:last-child {
+  margin-block-end: 0;
+}
+
+.footer-contact-location img {
+  width: 2.125em;
+  height: 2.125em;
+}
+
+.footer-contact-location p {
+  opacity: .9;
+  padding-inline-start: .59em;
+  font-size: 1.06rem;
+  font-weight: 500;
+  line-height: 1.35em;
+}
+
+@media (width >= 26.56rem) {
+  .footer-extra-list {
+    gap: 2.5em;
+    display: flex;
+  }
+}
+
+.footer-extra-list li {
+  margin-block-end: 10px;
+  line-height: 1.47em;
+}
+
+.footer-extra-list a {
+  color: #fff;
+  opacity: .95;
+  font-size: 1.06rem;
+  transition: all .3s;
+}
+
+.footer-extra-list a:hover {
+  color: #ffd62c;
+}
+
+.footer-open-hours p {
+  opacity: .95;
+  margin-block-end: .59em;
+}
+
+.footer-newsletter {
+  z-index: 1;
+  padding-inline-end: 30px;
+  position: relative;
+}
+
+.footer-newsletter p {
+  opacity: .95;
+  margin-block-end: 2.35em;
+}
+
+.footer-newsletter form {
+  background-color: #0000001a;
+  border-radius: 8px;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+  padding: 1em 1.25em;
+  display: flex;
+}
+
+@media (width >= 26.56rem) {
+  .footer-newsletter form {
+    width: min(100%, 18.125em);
+  }
+}
+
+.footer-newsletter form input {
+  color: #fff;
+  font-family: inherit;
+  font-size: inherit;
+  background-color: #0000;
+  border: none;
+  outline: none;
+  flex: 1;
+}
+
+.footer-newsletter form input::placeholder {
+  color: #ffffff80;
+}
+
+.footer-newsletter button {
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.footer-newsletter button span {
+  text-transform: uppercase;
+  color: #ffe046;
+}
+
+.footer-img-yellow {
+  position: absolute;
+  bottom: 1.875em;
+  right: 4.375em;
+}
+
+.footer-shadow-img {
+  max-width: 1140px;
+  height: 540px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
 .hero {
   position: relative;
   overflow: hidden;
@@ -1799,6 +2058,7 @@ img, svg {
   font-size: 2.06rem;
   font-weight: 600;
   line-height: 1.24;
+  position: relative;
 }
 
 @media (width >= 65.375rem) {
