@@ -35,7 +35,7 @@ ScrollTrigger.matchMedia({
         trigger: '.hero-background',
         start: '70% 90%',
         end: 'bottom 70%',
-        scrub: true,
+        scrub: false,
         markers: false,
       },
       x: -200,
@@ -47,7 +47,7 @@ ScrollTrigger.matchMedia({
         trigger: '.grey-circle',
         start: 'top 80%',
         end: '50% 50%',
-        scrub: true,
+        scrub: false,
         markers: false,
       },
       x: 250,
@@ -182,7 +182,7 @@ gsap.from('.item-ani', {
 const tl5 = gsap.timeline({
   scrollTrigger: {
     trigger: '.choose-us-right-col',
-    start: 'top 60%',
+    start: 'top 55%',
     end: 'top 50%',
     markers: false,
     scrub: false,
@@ -202,7 +202,7 @@ tl5
       y: 110,
       duration: 1,
     },
-    '-=0.5'
+    '-=0.6'
   )
   .from(
     '.choose-us-shape-ani-2',
@@ -211,7 +211,7 @@ tl5
       y: 50,
       duration: 1,
     },
-    '-=0.4'
+    '-=0.6'
   )
   .from(
     '.choose-us-shape-ani-3',
@@ -220,8 +220,158 @@ tl5
       x: -110,
       duration: 1,
     },
-    '-=0.4'
+    '-=0.6'
   );
+
+//our pricing element
+const tl6 = gsap.timeline({
+  scrollTrigger: {
+    trigger: '.our-pricing-title',
+    start: 'top 75%',
+    end: 'bottom 50%',
+    markers: false,
+    scrub: false,
+  },
+});
+
+tl6
+  .from('.pricing-title-img', {
+    opacity: 0,
+    duration: 1,
+  })
+  .from(
+    '.pricing-title-ani',
+    {
+      opacity: 0,
+      duration: 1.5,
+    },
+    '-=0.5'
+  );
+
+const tl7 = gsap.timeline({
+  scrollTrigger: {
+    trigger: '.our-pricing-card-1',
+    start: 'top 60%',
+    end: 'top 50%',
+    markers: false,
+    scrub: false,
+  },
+});
+tl7
+  .from('.our-pricing-card-1', {
+    opacity: 0,
+    x: 100,
+    duration: 1.4,
+  })
+  .from(
+    '.card-price-1-ani',
+    {
+      opacity: 0,
+      y: -50,
+      duration: 1.4,
+    },
+    '-=1.2'
+  );
+
+const tl8 = gsap.timeline({
+  scrollTrigger: {
+    trigger: '.our-pricing-card-2',
+    start: 'top 60%',
+    end: 'top 50%',
+    markers: false,
+    scrub: false,
+  },
+});
+
+tl8
+  .from('.our-pricing-card-2', {
+    opacity: 0,
+    scale: 0.8,
+    duration: 1.4,
+  })
+  .from(
+    '.card-price-2-ani',
+    {
+      opacity: 0,
+      y: -50,
+      duration: 1.4,
+    },
+    '-=0.7'
+  );
+
+const tl9 = gsap.timeline({
+  scrollTrigger: {
+    trigger: '.our-pricing-card-3',
+    start: 'top 60%',
+    end: 'top 50%',
+    markers: false,
+    scrub: false,
+  },
+});
+
+tl9
+  .from('.our-pricing-card-3', {
+    opacity: 0,
+    x: -100,
+    duration: 1.4,
+  })
+  .from(
+    '.card-price-3-ani',
+    {
+      opacity: 0,
+      y: -50,
+      duration: 1.4,
+    },
+    '-=1.2'
+  );
+
+//testimonial element
+const tl10 = gsap.timeline({
+  scrollTrigger: {
+    trigger: '.testimonial-title-ani',
+    start: 'top 65%',
+    end: 'bottom 55%',
+    markers: false,
+    scrub: false,
+  },
+});
+tl10
+  .from('.testimonial-title-ani', {
+    opacity: 0,
+    y: -50,
+    duration: 1.4,
+  })
+  .from(
+    '.testimonial-carousel-ani',
+    {
+      opacity: 0,
+      scale: 0.8,
+      duration: 1.4,
+    },
+    '-=0.4'
+  )
+  .from('.testimonial-btns-ani', {
+    opacity: 0,
+    y: -10,
+    duration: 1,
+  });
+
+//footer
+const tl11 = gsap.timeline({
+  scrollTrigger: {
+    trigger: '.footer-widget',
+    start: '100% 75%',
+    end: 'bottom 60%',
+    markers: false,
+    scrub: false,
+  },
+});
+
+tl11.from('.footer-widget-ani', {
+  opacity: 0,
+  y: 100,
+  duration: 1,
+});
 
 //Carousel
 const wrapper = document.querySelector('.wrapper');
