@@ -35,7 +35,7 @@ ScrollTrigger.matchMedia({
         trigger: '.hero-background',
         start: '70% 90%',
         end: 'bottom 70%',
-        scrub: false,
+        scrub: true,
         markers: false,
       },
       x: -200,
@@ -47,7 +47,7 @@ ScrollTrigger.matchMedia({
         trigger: '.grey-circle',
         start: 'top 80%',
         end: '50% 50%',
-        scrub: false,
+        scrub: true,
         markers: false,
       },
       x: 250,
@@ -92,6 +92,46 @@ tl.from('.about-el-btn', {
     '-=0.5'
   );
 
+//about-element-desktop
+ScrollTrigger.matchMedia({
+  '(min-width: 900px)': function () {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.element-col-right',
+        start: 'top 70%',
+        end: '150px 45%',
+        markers: false,
+        scrub: 3,
+        toggleActions: 'play reverse play reverse',
+      },
+    });
+    tl.to('.element-about-1-ani', {
+      y: -50,
+      duration: 1,
+    }).to(
+      '.element-about-2-ani',
+      {
+        y: -25,
+        duration: 0.75,
+      },
+      '-=0.5'
+    );
+
+    gsap.to('.element-about-5-ani', {
+      scrollTrigger: {
+        trigger: '.element-img-3',
+        start: '50% 85%',
+        end: 'bottom 50%',
+        markers: false,
+        scrub: 3,
+        toggleActions: 'play reverse none none',
+      },
+      y: -50,
+      duration: 0.75,
+    });
+  },
+});
+
 //service element
 const tl2 = gsap.timeline({
   scrollTrigger: {
@@ -115,6 +155,32 @@ tl2
     duration: 1,
   });
 
+//service-element-desktop-animation
+ScrollTrigger.matchMedia({
+  '(min-width: 900px)': function () {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.element-services-wrapper',
+        start: 'top 70%',
+        end: 'top 50%',
+        markers: true,
+        scrub: 4,
+      },
+    });
+
+    tl.to('.element-srvices-card-1', {
+      y: -50,
+      duration: 0.5,
+    }).to(
+      '.element-srvices-card-3',
+      {
+        marginTop: 50,
+        duration: 0.5,
+      },
+      '-=0.25'
+    );
+  },
+});
 //portfolio element
 const tl3 = gsap.timeline({
   scrollTrigger: {
@@ -129,7 +195,7 @@ const tl3 = gsap.timeline({
 tl3
   .from('.element-portfolio-text', {
     opacity: 0,
-    y: -30,
+    marginTop: -30,
     duration: 1,
   })
   .from(
@@ -296,7 +362,7 @@ tl8
       y: -50,
       duration: 1.4,
     },
-    '-=0.7'
+    '-=0.9'
   );
 
 const tl9 = gsap.timeline({
@@ -324,6 +390,23 @@ tl9
     },
     '-=1.2'
   );
+
+//our-pricing-desktop
+ScrollTrigger.matchMedia({
+  '(min-width: 900px)': function () {
+    gsap.to('.pricing-title-img', {
+      scrollTrigger: {
+        trigger: '.our-pricing-container',
+        start: 'top 80%',
+        end: '150px 35%',
+        markers: false,
+        scrub: 2,
+      },
+      rotate: '360deg',
+      duration: 0.1,
+    });
+  },
+});
 
 //testimonial element
 const tl10 = gsap.timeline({
@@ -356,24 +439,8 @@ tl10
     duration: 1,
   });
 
-//footer
-const tl11 = gsap.timeline({
-  scrollTrigger: {
-    trigger: '.footer-widget',
-    start: '100% 75%',
-    end: 'bottom 60%',
-    markers: false,
-    scrub: false,
-  },
-});
-
-tl11.from('.footer-widget-ani', {
-  opacity: 0,
-  y: 100,
-  duration: 1,
-});
-
 //Carousel
+
 const wrapper = document.querySelector('.wrapper');
 const carousel = document.querySelector('.carousel');
 const firstCardWidth = carousel.querySelector('.card').offsetWidth;

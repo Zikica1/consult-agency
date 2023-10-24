@@ -758,26 +758,6 @@ img, svg {
   left: 0;
 }
 
-.footer-bottom {
-  text-align: center;
-  place-items: center;
-  padding: 1.875em 2.19em;
-  display: grid;
-  position: relative;
-}
-
-.footer-bottom p {
-  color: #00276a;
-  font-size: .94rem;
-}
-
-.footer-bottom-rectangle-img {
-  z-index: -1;
-  position: absolute;
-  top: -5.625em;
-  right: 1.25em;
-}
-
 .hero {
   position: relative;
   overflow: hidden;
@@ -1482,7 +1462,7 @@ img, svg {
   padding-block: 5em;
   padding-inline: 2.5em 2.875em;
   position: relative;
-  box-shadow: 0 0 35px #0000001a;
+  box-shadow: 0 7px 35px #00000014;
 }
 
 @media (width >= 26.56rem) {
