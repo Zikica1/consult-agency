@@ -175,17 +175,6 @@
   }
 }
 
-.hero-rectangle {
-  position: absolute;
-  top: -35px;
-  left: 55%;
-  transform: rotate(180deg);
-
-  @include extraLargeSize {
-    left: 26%;
-  }
-}
-
 .hero-left-col .rectangle-blue {
   grid-column: 1;
   grid-row: 1/5;

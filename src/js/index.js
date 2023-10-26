@@ -163,8 +163,9 @@ ScrollTrigger.matchMedia({
         trigger: '.element-services-wrapper',
         start: 'top 70%',
         end: 'top 50%',
-        markers: true,
+        markers: false,
         scrub: 4,
+        toggleActions: 'play revers play revers',
       },
     });
 
@@ -206,6 +207,23 @@ tl3
     },
     '-=1'
   );
+
+//portfolio card-redirect to another page
+const portfolioCard1 = document.querySelector('.portfolio-card-1');
+const portfolioCard2 = document.querySelector('.portfolio-card-2');
+const portfolioCard3 = document.querySelector('.portfolio-card-3');
+
+portfolioCard1.onclick = function () {
+  window.location.href = 'portfolio-card-1.html';
+};
+
+portfolioCard2.onclick = function () {
+  window.location.href = 'portfolio-card-2.html';
+};
+
+portfolioCard3.onclick = function () {
+  window.location.href = 'portfolio-card-3.html';
+};
 
 //choose us element
 const tl4 = gsap.timeline({

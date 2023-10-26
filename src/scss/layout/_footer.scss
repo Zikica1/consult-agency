@@ -249,6 +249,17 @@
 .footer-bottom-rectangle-img {
   position: absolute;
   z-index: -1;
-  top: -5.625em;
-  right: 1.25em;
+  inset-block-start: -5.625em;
+  inset-inline-end: 1.25em;
+}
+
+.header-rectangle {
+  position: absolute;
+  top: -35px;
+  left: 55%;
+  transform: rotate(180deg);
+
+  @include extraLargeSize {
+    inset-inline-start: 26%;
+  }
 }
