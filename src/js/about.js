@@ -105,3 +105,120 @@ tl2
     opacity: 0,
     duration: 1,
   });
+
+//our team
+gsap.from('.our-team-title', {
+  scrollTrigger: {
+    trigger: '.our-team-title',
+    start: 'top 70%',
+    end: 'bottom 50%',
+    markers: false,
+    scrub: false,
+  },
+  opacity: 0,
+  duration: 1,
+});
+
+gsap.from('.our-team-card-1', {
+  scrollTrigger: {
+    trigger: '.our-team-card-1',
+    start: 'top 70%',
+    end: '150px 50%',
+    markers: false,
+    scrub: false,
+  },
+  opacity: 0,
+  x: -100,
+  duration: 1,
+});
+
+gsap.from('.our-team-card-2', {
+  scrollTrigger: {
+    trigger: '.our-team-card-2',
+    start: 'top 70%',
+    end: '150px 50%',
+    markers: false,
+    scrub: false,
+  },
+  opacity: 0,
+  x: -100,
+  duration: 1,
+});
+
+gsap.from('.our-team-card-3', {
+  scrollTrigger: {
+    trigger: '.our-team-card-3',
+    start: 'top 70%',
+    end: '150px 50%',
+    markers: false,
+    scrub: false,
+  },
+  opacity: 0,
+  x: 100,
+  duration: 1,
+});
+
+gsap.from('.our-team-card-4', {
+  scrollTrigger: {
+    trigger: '.our-team-card-4',
+    start: 'top 70%',
+    end: '150px 50%',
+    markers: false,
+    scrub: false,
+  },
+  opacity: 0,
+  x: 100,
+  duration: 1,
+});
+
+gsap.from('.our-team-card-5', {
+  scrollTrigger: {
+    trigger: '.our-team-card-5',
+    start: 'top 70%',
+    end: '150px 50%',
+    markers: false,
+    scrub: false,
+  },
+  opacity: 0,
+  x: -100,
+  duration: 1,
+});
+
+gsap.from('.our-team-card-6', {
+  scrollTrigger: {
+    trigger: '.our-team-card-6',
+    start: 'top 70%',
+    end: '150px 50%',
+    markers: false,
+    scrub: false,
+  },
+  opacity: 0,
+  x: -100,
+  duration: 1,
+});
+
+gsap.from('.our-team-card-7', {
+  scrollTrigger: {
+    trigger: '.our-team-card-7',
+    start: 'top 70%',
+    end: '150px 50%',
+    markers: false,
+    scrub: false,
+  },
+  opacity: 0,
+  x: 100,
+  duration: 1,
+});
+
+gsap.from('.our-team-card-8', {
+  scrollTrigger: {
+    trigger: '.our-team-card-8',
+    start: 'top 70%',
+    end: '150px 50%',
+    markers: false,
+    scrub: false,
+  },
+  opacity: 0,
+  x: 100,
+  duration: 1,
+});

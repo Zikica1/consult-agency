@@ -657,6 +657,114 @@ tl2.from(".welcome-brochure-content", {
     opacity: 0,
     duration: 1
 });
+//our team
+gsap.from(".our-team-title", {
+    scrollTrigger: {
+        trigger: ".our-team-title",
+        start: "top 70%",
+        end: "bottom 50%",
+        markers: false,
+        scrub: false
+    },
+    opacity: 0,
+    duration: 1
+});
+gsap.from(".our-team-card-1", {
+    scrollTrigger: {
+        trigger: ".our-team-card-1",
+        start: "top 70%",
+        end: "150px 50%",
+        markers: false,
+        scrub: false
+    },
+    opacity: 0,
+    x: -100,
+    duration: 1
+});
+gsap.from(".our-team-card-2", {
+    scrollTrigger: {
+        trigger: ".our-team-card-2",
+        start: "top 70%",
+        end: "150px 50%",
+        markers: false,
+        scrub: false
+    },
+    opacity: 0,
+    x: -100,
+    duration: 1
+});
+gsap.from(".our-team-card-3", {
+    scrollTrigger: {
+        trigger: ".our-team-card-3",
+        start: "top 70%",
+        end: "150px 50%",
+        markers: false,
+        scrub: false
+    },
+    opacity: 0,
+    x: 100,
+    duration: 1
+});
+gsap.from(".our-team-card-4", {
+    scrollTrigger: {
+        trigger: ".our-team-card-4",
+        start: "top 70%",
+        end: "150px 50%",
+        markers: false,
+        scrub: false
+    },
+    opacity: 0,
+    x: 100,
+    duration: 1
+});
+gsap.from(".our-team-card-5", {
+    scrollTrigger: {
+        trigger: ".our-team-card-5",
+        start: "top 70%",
+        end: "150px 50%",
+        markers: false,
+        scrub: false
+    },
+    opacity: 0,
+    x: -100,
+    duration: 1
+});
+gsap.from(".our-team-card-6", {
+    scrollTrigger: {
+        trigger: ".our-team-card-6",
+        start: "top 70%",
+        end: "150px 50%",
+        markers: false,
+        scrub: false
+    },
+    opacity: 0,
+    x: -100,
+    duration: 1
+});
+gsap.from(".our-team-card-7", {
+    scrollTrigger: {
+        trigger: ".our-team-card-7",
+        start: "top 70%",
+        end: "150px 50%",
+        markers: false,
+        scrub: false
+    },
+    opacity: 0,
+    x: 100,
+    duration: 1
+});
+gsap.from(".our-team-card-8", {
+    scrollTrigger: {
+        trigger: ".our-team-card-8",
+        start: "top 70%",
+        end: "150px 50%",
+        markers: false,
+        scrub: false
+    },
+    opacity: 0,
+    x: 100,
+    duration: 1
+});
 
 },{"2dcfbc17d23cd37e":"aQ24n"}],"aQ24n":[function(require,module,exports) {
 module.exports = require("1b27de4747ba44f2")(require("210e4218f3ab3776").getBundleURL("bzeBA") + "main.18dbc454.js" + "?" + Date.now()).catch((err)=>{
