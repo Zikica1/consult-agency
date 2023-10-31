@@ -5,6 +5,13 @@ async function load() {
 
 load();
 
+async function load2() {
+  const page = await import('./main2.js');
+  page.render2();
+}
+
+load2();
+
 //welcome
 gsap.to('.welcome-anim-1', {
   scrollTrigger: {

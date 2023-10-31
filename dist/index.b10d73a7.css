@@ -3097,4 +3097,114 @@ main {
   color: #00276a;
 }
 
+.our-skill {
+  margin-block-start: 9.375em;
+  padding-inline: 2.187em;
+}
+
+.our-skill-left-col h2 {
+  color: #00276a;
+  margin-block: .15em .73em;
+  font-size: 2.06rem;
+  font-weight: 600;
+  line-height: 1.24em;
+}
+
+.our-skill-left-col p {
+  margin-block-end: 1.71em;
+  font-size: .875rem;
+  line-height: 1.43em;
+}
+
+.bars {
+  margin-block-start: 4.125em;
+}
+
+.bar {
+  margin-block-end: 1.25em;
+}
+
+.bar .info {
+  color: #00276a;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-block-end: .25em;
+  display: flex;
+}
+
+.bar .info-1 {
+  width: 75%;
+}
+
+.bar .info-2 {
+  width: 90%;
+}
+
+.bar .info-3 {
+  width: 60%;
+}
+
+.bar .info-4 {
+  width: 80%;
+}
+
+.info > :first-child {
+  padding-inline-start: .5em;
+  font-size: 1.25rem;
+  font-weight: 600;
+  position: relative;
+}
+
+.info > :first-child:before {
+  content: "";
+  background-image: linear-gradient(135deg, #06b598 0%, #2ae5c5 100%);
+  border-radius: 50%;
+  width: .375em;
+  height: .375em;
+  position: absolute;
+  top: .55em;
+  left: 0;
+}
+
+.info-percentages {
+  font-size: 1.75rem;
+  font-weight: 300;
+}
+
+.bar .line {
+  --width: 100%;
+  width: var(--width);
+  background-color: #e2e2e2;
+  border-radius: .25em;
+  height: .75em;
+  position: relative;
+}
+
+.bar .line:before {
+  content: "";
+  background-image: linear-gradient(107deg, #fcad25 0%, #ffe046);
+  border-radius: 8px;
+  width: 90%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.bar .creativity:before {
+  width: 75%;
+}
+
+.bar .development:before {
+  width: 90%;
+}
+
+.bar .marketing:before {
+  width: 60%;
+}
+
+.bar .analysis:before {
+  width: 80%;
+}
+
 /*# sourceMappingURL=index.b10d73a7.css.map */

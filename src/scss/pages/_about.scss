@@ -335,3 +335,115 @@
 .our-team-card-8 p {
   color: $color-first;
 }
+
+/* Our skill */
+.our-skill {
+  margin-block-start: 9.375em;
+  padding-inline: 2.187em;
+}
+
+.our-skill-left-col h2 {
+  color: $color-first;
+  font-size: $title-lg;
+  font-weight: 600;
+  line-height: 1.24em;
+  margin-block: 0.15em 0.73em;
+}
+
+.our-skill-left-col p {
+  font-size: $body-sm;
+  line-height: 1.43em;
+  margin-block-end: 1.71em;
+}
+
+.bars {
+  margin-block-start: 4.125em;
+}
+
+.bar {
+  margin-block-end: 1.25em;
+}
+
+.bar .info {
+  color: $color-first;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-block-end: 0.25em;
+}
+
+.bar .info-1 {
+  width: 75%;
+}
+
+.bar .info-2 {
+  width: 90%;
+}
+
+.bar .info-3 {
+  width: 60%;
+}
+
+.bar .info-4 {
+  width: 80%;
+}
+
+.info > *:first-child {
+  position: relative;
+  font-size: 1.25rem;
+  font-weight: 600;
+  padding-inline-start: 0.5em;
+}
+
+.info > *:first-child::before {
+  content: '';
+  position: absolute;
+  width: 0.375em;
+  height: 0.375em;
+  border-radius: 50%;
+  background-image: $gradient-7;
+  left: 0;
+  top: 0.55em;
+}
+
+.info-percentages {
+  font-size: 1.75rem;
+  font-weight: 300;
+}
+
+.bar .line {
+  --width: 100%;
+
+  position: relative;
+  width: var(--width);
+  height: 0.75em;
+  background-color: #e2e2e2;
+  border-radius: 0.25em;
+}
+
+.bar .line::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 90%;
+  height: 100%;
+  background-image: $gradient-8;
+  border-radius: 8px;
+}
+
+.bar .creativity::before {
+  width: 75%;
+}
+
+.bar .development::before {
+  width: 90%;
+}
+
+.bar .marketing::before {
+  width: 60%;
+}
+
+.bar .analysis::before {
+  width: 80%;
+}

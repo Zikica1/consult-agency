@@ -142,13 +142,13 @@
       this[globalName] = mainExports;
     }
   }
-})({"5xNsm":[function(require,module,exports) {
+})({"9dP7F":[function(require,module,exports) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "d6ea1d42532a7575";
-module.bundle.HMR_BUNDLE_ID = "86be4ae690c04c5e";
+module.bundle.HMR_BUNDLE_ID = "eb3f75dd4d158c38";
 "use strict";
 /* global HMR_HOST, HMR_PORT, HMR_ENV_HASH, HMR_SECURE, chrome, browser, __parcel__import__, __parcel__importScripts__, ServiceWorkerGlobalScope */ /*::
 import type {
@@ -573,313 +573,73 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
     });
 }
 
-},{}],"hS7Ir":[function(require,module,exports) {
-async function load() {
-    const page = await require("2dcfbc17d23cd37e");
-    page.render();
-}
-load();
-async function load2() {
-    const page = await require("e2bde280df77895c");
-    page.render2();
-}
-load2();
-//welcome
-gsap.to(".welcome-anim-1", {
-    scrollTrigger: {
-        trigger: ".welcome-title",
-        start: "top 50%",
-        end: "bottom 40%",
-        markers: false,
-        scrub: false
-    },
-    "--y": "100%",
-    duration: 2,
-    stagger: 0.8
-});
-gsap.to(".welcome-signature", {
-    scrollTrigger: {
-        trigger: ".welcome-signature",
-        start: "top 90%",
-        end: "top 80%",
-        markers: false,
-        scrub: false
-    },
-    clipPath: "inset(0 0 0 0)",
-    duration: 0.6
-});
-gsap.to(".welcome-img-anim", {
-    scrollTrigger: {
-        trigger: ".welcome-img-anim",
-        start: "top 65%",
-        end: "bottom 40%",
-        markers: false,
-        scrub: false
-    },
-    "--opacity": "1",
-    "--x": 0,
-    duration: 1
-});
-const tl = gsap.timeline({
-    scrollTrigger: {
-        trigger: ".welcome-rectangle-img",
-        start: "top 70%",
-        end: "bottom 50%",
-        markers: false,
-        scrub: false
-    }
-});
-tl.to(".about-rectangle-yellow-anim", {
-    "--scaleY2": "scaleY(1)",
-    duration: 1
-}).to(".about-rectangle-green-anim", {
-    "--opacity3": "opacity(1)",
-    "--y3": "translateY(0)",
-    duration: 1
-}, "-=0.60").to(".about-half-circle-blue-anim", {
-    "--opacity3": "1",
-    "--y2": "translate(0)"
-}, "-=0.8").to(".welcome-circle-img-anim", {
-    "--opacity2": "1",
-    "--marginL": "0",
-    duration: 0.5
-}, "-=0.9");
-//welcome brochure
-const tl2 = gsap.timeline({
-    scrollTrigger: {
-        trigger: ".welcome-brochure-content",
-        start: "top 50%",
-        end: "bottom 40%",
-        markers: false,
-        scrub: false
-    }
-});
-tl2.from(".welcome-brochure-content", {
-    opacity: 0,
-    y: -100,
-    duration: 1
-}).from(".welcome-btn-anim", {
-    opacity: 0,
-    duration: 1
-});
-//our team
-gsap.from(".our-team-title", {
-    scrollTrigger: {
-        trigger: ".our-team-title",
-        start: "top 70%",
-        end: "bottom 50%",
-        markers: false,
-        scrub: false
-    },
-    opacity: 0,
-    duration: 1
-});
-gsap.from(".our-team-card-1", {
-    scrollTrigger: {
-        trigger: ".our-team-card-1",
-        start: "top 70%",
-        end: "150px 50%",
-        markers: false,
-        scrub: false
-    },
-    opacity: 0,
-    x: -100,
-    duration: 1
-});
-gsap.from(".our-team-card-2", {
-    scrollTrigger: {
-        trigger: ".our-team-card-2",
-        start: "top 70%",
-        end: "150px 50%",
-        markers: false,
-        scrub: false
-    },
-    opacity: 0,
-    x: -100,
-    duration: 1
-});
-gsap.from(".our-team-card-3", {
-    scrollTrigger: {
-        trigger: ".our-team-card-3",
-        start: "top 70%",
-        end: "150px 50%",
-        markers: false,
-        scrub: false
-    },
-    opacity: 0,
-    x: 100,
-    duration: 1
-});
-gsap.from(".our-team-card-4", {
-    scrollTrigger: {
-        trigger: ".our-team-card-4",
-        start: "top 70%",
-        end: "150px 50%",
-        markers: false,
-        scrub: false
-    },
-    opacity: 0,
-    x: 100,
-    duration: 1
-});
-gsap.from(".our-team-card-5", {
-    scrollTrigger: {
-        trigger: ".our-team-card-5",
-        start: "top 70%",
-        end: "150px 50%",
-        markers: false,
-        scrub: false
-    },
-    opacity: 0,
-    x: -100,
-    duration: 1
-});
-gsap.from(".our-team-card-6", {
-    scrollTrigger: {
-        trigger: ".our-team-card-6",
-        start: "top 70%",
-        end: "150px 50%",
-        markers: false,
-        scrub: false
-    },
-    opacity: 0,
-    x: -100,
-    duration: 1
-});
-gsap.from(".our-team-card-7", {
-    scrollTrigger: {
-        trigger: ".our-team-card-7",
-        start: "top 70%",
-        end: "150px 50%",
-        markers: false,
-        scrub: false
-    },
-    opacity: 0,
-    x: 100,
-    duration: 1
-});
-gsap.from(".our-team-card-8", {
-    scrollTrigger: {
-        trigger: ".our-team-card-8",
-        start: "top 70%",
-        end: "150px 50%",
-        markers: false,
-        scrub: false
-    },
-    opacity: 0,
-    x: 100,
-    duration: 1
-});
-
-},{"2dcfbc17d23cd37e":"aQ24n","e2bde280df77895c":"cTMIZ"}],"aQ24n":[function(require,module,exports) {
-module.exports = require("1b27de4747ba44f2")(require("210e4218f3ab3776").getBundleURL("bzeBA") + "main.18dbc454.js" + "?" + Date.now()).catch((err)=>{
-    delete module.bundle.cache[module.id];
-    throw err;
-}).then(()=>module.bundle.root("1SICI"));
-
-},{"1b27de4747ba44f2":"61B45","210e4218f3ab3776":"lgJ39"}],"61B45":[function(require,module,exports) {
-"use strict";
-var cacheLoader = require("ca2a84f7fa4a3bb0");
-module.exports = cacheLoader(function(bundle) {
-    return new Promise(function(resolve, reject) {
-        // Don't insert the same script twice (e.g. if it was already in the HTML)
-        var existingScripts = document.getElementsByTagName("script");
-        if ([].concat(existingScripts).some(function isCurrentBundle(script) {
-            return script.src === bundle;
-        })) {
-            resolve();
-            return;
-        }
-        var preloadLink = document.createElement("link");
-        preloadLink.href = bundle;
-        preloadLink.rel = "preload";
-        preloadLink.as = "script";
-        document.head.appendChild(preloadLink);
-        var script = document.createElement("script");
-        script.async = true;
-        script.type = "text/javascript";
-        script.src = bundle;
-        script.onerror = function(e) {
-            var error = new TypeError("Failed to fetch dynamically imported module: ".concat(bundle, ". Error: ").concat(e.message));
-            script.onerror = script.onload = null;
-            script.remove();
-            reject(error);
-        };
-        script.onload = function() {
-            script.onerror = script.onload = null;
-            resolve();
-        };
-        document.getElementsByTagName("head")[0].appendChild(script);
-    });
-});
-
-},{"ca2a84f7fa4a3bb0":"j49pS"}],"j49pS":[function(require,module,exports) {
-"use strict";
-var cachedBundles = {};
-var cachedPreloads = {};
-var cachedPrefetches = {};
-function getCache(type) {
-    switch(type){
-        case "preload":
-            return cachedPreloads;
-        case "prefetch":
-            return cachedPrefetches;
-        default:
-            return cachedBundles;
-    }
-}
-module.exports = function(loader, type) {
-    return function(bundle) {
-        var cache = getCache(type);
-        if (cache[bundle]) return cache[bundle];
-        return cache[bundle] = loader.apply(null, arguments).catch(function(e) {
-            delete cache[bundle];
-            throw e;
+},{}],"1tWgD":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "render2", ()=>render2);
+function render2() {
+    let counter = document.querySelectorAll(".counter");
+    const observer = new IntersectionObserver((entries)=>{
+        entries.forEach((entry)=>{
+            if (!entry.isIntersecting) return;
+            countUp();
+            observer.unobserve(entry.target);
         });
+    });
+    counter.forEach((item)=>{
+        observer.observe(item);
+    });
+    //Counter
+    function countUp() {
+        counter.forEach((counter)=>{
+            counter.innerText = "0";
+            const updateCounter = ()=>{
+                //count target
+                const target = +counter.getAttribute("data-target");
+                //current counter value
+                const c = +counter.innerText;
+                //increment
+                const increment = target / 100;
+                if (c < target) {
+                    counter.innerText = `${Math.ceil(c + increment)}`;
+                    setTimeout(updateCounter, 75);
+                } else counter.innerText = target;
+            };
+            updateCounter();
+        });
+    }
+}
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gkKU3":[function(require,module,exports) {
+exports.interopDefault = function(a) {
+    return a && a.__esModule ? a : {
+        default: a
     };
 };
+exports.defineInteropFlag = function(a) {
+    Object.defineProperty(a, "__esModule", {
+        value: true
+    });
+};
+exports.exportAll = function(source, dest) {
+    Object.keys(source).forEach(function(key) {
+        if (key === "default" || key === "__esModule" || dest.hasOwnProperty(key)) return;
+        Object.defineProperty(dest, key, {
+            enumerable: true,
+            get: function() {
+                return source[key];
+            }
+        });
+    });
+    return dest;
+};
+exports.export = function(dest, destName, get) {
+    Object.defineProperty(dest, destName, {
+        enumerable: true,
+        get: get
+    });
+};
 
-},{}],"lgJ39":[function(require,module,exports) {
-"use strict";
-var bundleURL = {};
-function getBundleURLCached(id) {
-    var value = bundleURL[id];
-    if (!value) {
-        value = getBundleURL();
-        bundleURL[id] = value;
-    }
-    return value;
-}
-function getBundleURL() {
-    try {
-        throw new Error();
-    } catch (err) {
-        var matches = ("" + err.stack).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^)\n]+/g);
-        if (matches) // The first two stack frames will be this function and getBundleURLCached.
-        // Use the 3rd one, which will be a runtime in the original bundle.
-        return getBaseURL(matches[2]);
-    }
-    return "/";
-}
-function getBaseURL(url) {
-    return ("" + url).replace(/^((?:https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/.+)\/[^/]+$/, "$1") + "/";
-}
-// TODO: Replace uses with `new URL(url).origin` when ie11 is no longer supported.
-function getOrigin(url) {
-    var matches = ("" + url).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^/]+/);
-    if (!matches) throw new Error("Origin not found");
-    return matches[0];
-}
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-exports.getOrigin = getOrigin;
+},{}]},["9dP7F"], null, "parcelRequiree837")
 
-},{}],"cTMIZ":[function(require,module,exports) {
-module.exports = require("b84b69112577ef7d")(require("c0add16d56102c5f").getBundleURL("bzeBA") + "main2.4d158c38.js" + "?" + Date.now()).catch((err)=>{
-    delete module.bundle.cache[module.id];
-    throw err;
-}).then(()=>module.bundle.root("1tWgD"));
-
-},{"b84b69112577ef7d":"61B45","c0add16d56102c5f":"lgJ39"}]},["5xNsm","hS7Ir"], "hS7Ir", "parcelRequiree837")
-
-//# sourceMappingURL=about.90c04c5e.js.map
+//# sourceMappingURL=main2.4d158c38.js.map
