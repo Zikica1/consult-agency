@@ -644,6 +644,19 @@ tl.to(".about-rectangle-yellow-anim", {
     "--marginL": "0",
     duration: 0.5
 }, "-=0.9");
+const mm = gsap.matchMedia();
+mm.add("(min-width:1046px)", ()=>{
+    gsap.from(".welcome-phone-img-anim", {
+        scrollTrigger: {
+            trigger: ".welcome-rectangle-img",
+            start: "50px 90%",
+            end: "bottom 90%",
+            markers: false,
+            scrub: 3
+        },
+        y: -100
+    });
+});
 //welcome brochure
 const tl2 = gsap.timeline({
     scrollTrigger: {
@@ -769,6 +782,31 @@ gsap.from(".our-team-card-8", {
     opacity: 0,
     x: 100,
     duration: 1
+});
+//our skill
+gsap.from(".our-skill-left-col", {
+    scrollTrigger: {
+        trigger: ".our-skill-left-col",
+        start: "top 60%",
+        end: "+=150px",
+        markers: false,
+        scrub: false
+    },
+    opacity: 0,
+    duration: 1.5
+});
+const mm2 = gsap.matchMedia();
+mm2.add("(min-width: 1046px)", ()=>{
+    gsap.to(".our-skill-img-anim", {
+        scrollTrigger: {
+            trigger: ".our-skill-wrapper",
+            start: "top 60%",
+            end: "bottom 25%",
+            markers: false,
+            scrub: 3
+        },
+        y: -150
+    });
 });
 
 },{"2dcfbc17d23cd37e":"aQ24n","e2bde280df77895c":"cTMIZ"}],"aQ24n":[function(require,module,exports) {

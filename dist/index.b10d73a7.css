@@ -2796,6 +2796,16 @@ main {
   line-height: 1.24em;
 }
 
+@media (width >= 65.375rem) {
+  .welcome-title h2 {
+    font-size: 2.8125rem;
+  }
+
+  .welcome-title p {
+    font-size: 1rem;
+  }
+}
+
 .welcome-phone-num {
   flex-direction: column;
   justify-content: center;
@@ -3100,14 +3110,30 @@ main {
 .our-skill {
   margin-block-start: 9.375em;
   padding-inline: 2.187em;
+  position: relative;
+}
+
+@media (width >= 56.25rem) {
+  .our-skill-wrapper {
+    grid-template-columns: 55% 1fr;
+    column-gap: 1.5em;
+    display: grid;
+  }
 }
 
 .our-skill-left-col h2 {
   color: #00276a;
+  text-transform: capitalize;
   margin-block: .15em .73em;
   font-size: 2.06rem;
   font-weight: 600;
   line-height: 1.24em;
+}
+
+@media (width >= 65.375rem) {
+  .our-skill-left-col h2 {
+    font-size: 2.8125rem;
+  }
 }
 
 .our-skill-left-col p {
@@ -3116,12 +3142,33 @@ main {
   line-height: 1.43em;
 }
 
+@media (width >= 65.375rem) {
+  .our-skill-left-col p {
+    max-width: 85%;
+    font-size: 1rem;
+  }
+
+  .our-skill-right-col {
+    max-width: 90%;
+  }
+}
+
 .bars {
   margin-block-start: 4.125em;
 }
 
+@media (width >= 65.375rem) {
+  .bars {
+    margin-block-start: 0;
+  }
+}
+
 .bar {
-  margin-block-end: 1.25em;
+  margin-block-end: 2em;
+}
+
+.bar:last-child {
+  margin-block-end: 0;
 }
 
 .bar .info {
@@ -3155,6 +3202,12 @@ main {
   position: relative;
 }
 
+@media (width >= 65.375rem) {
+  .info > :first-child {
+    font-size: 1.5rem;
+  }
+}
+
 .info > :first-child:before {
   content: "";
   background-image: linear-gradient(135deg, #06b598 0%, #2ae5c5 100%);
@@ -3171,21 +3224,30 @@ main {
   font-weight: 300;
 }
 
+@media (width >= 65.375rem) {
+  .info-percentages {
+    font-size: 2.375rem;
+  }
+}
+
 .bar .line {
-  --width: 100%;
-  width: var(--width);
+  --scale-x: 0;
   background-color: #e2e2e2;
   border-radius: .25em;
+  width: 100%;
   height: .75em;
   position: relative;
 }
 
 .bar .line:before {
   content: "";
+  transform-origin: 0 100%;
+  transform: scaleX(var(--scale-x));
   background-image: linear-gradient(107deg, #fcad25 0%, #ffe046);
   border-radius: 8px;
   width: 90%;
   height: 100%;
+  transition: transform 1.5s;
   position: absolute;
   top: 0;
   left: 0;
@@ -3205,6 +3267,19 @@ main {
 
 .bar .analysis:before {
   width: 80%;
+}
+
+.our-skill-image {
+  position: absolute;
+  bottom: 7%;
+  right: 0;
+}
+
+.our-skill-image img {
+  object-fit: cover;
+  width: 3.25em;
+  height: 3.25em;
+  transform: rotate(18deg);
 }
 
 /*# sourceMappingURL=index.b10d73a7.css.map */

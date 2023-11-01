@@ -579,15 +579,19 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "render2", ()=>render2);
 function render2() {
     let counter = document.querySelectorAll(".counter");
-    const observer = new IntersectionObserver((entries)=>{
-        entries.forEach((entry)=>{
-            if (!entry.isIntersecting) return;
-            countUp();
-            observer.unobserve(entry.target);
-        });
+    //our skill
+    const tl3 = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".bar",
+            start: "top 90%",
+            end: "bottom 80%",
+            markers: false,
+            scrub: false,
+            stagger: 0.7
+        }
     });
-    counter.forEach((item)=>{
-        observer.observe(item);
+    tl3.add(countUp).to(".line", {
+        "--scale-x": "1"
     });
     //Counter
     function countUp() {
@@ -599,10 +603,10 @@ function render2() {
                 //current counter value
                 const c = +counter.innerText;
                 //increment
-                const increment = target / 100;
+                const increment = target / 35;
                 if (c < target) {
                     counter.innerText = `${Math.ceil(c + increment)}`;
-                    setTimeout(updateCounter, 75);
+                    setTimeout(updateCounter, 60);
                 } else counter.innerText = target;
             };
             updateCounter();

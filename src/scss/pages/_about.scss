@@ -37,6 +37,16 @@
   font-weight: 600;
   line-height: 1.24em;
   margin-block: 0.16em 0.53em;
+
+  @include extraLargeSize {
+    font-size: $headline-md;
+  }
+}
+
+.welcome-title p {
+  @include extraLargeSize {
+    font-size: $body-md;
+  }
 }
 
 .welcome-phone-num {
@@ -338,8 +348,17 @@
 
 /* Our skill */
 .our-skill {
+  position: relative;
   margin-block-start: 9.375em;
   padding-inline: 2.187em;
+}
+
+.our-skill-wrapper {
+  @include largeSize {
+    display: grid;
+    grid-template-columns: 55% 1fr;
+    column-gap: 1.5em;
+  }
 }
 
 .our-skill-left-col h2 {
@@ -347,21 +366,45 @@
   font-size: $title-lg;
   font-weight: 600;
   line-height: 1.24em;
+  text-transform: capitalize;
   margin-block: 0.15em 0.73em;
+
+  @include extraLargeSize {
+    font-size: $headline-md;
+  }
 }
 
 .our-skill-left-col p {
   font-size: $body-sm;
   line-height: 1.43em;
   margin-block-end: 1.71em;
+
+  @include extraLargeSize {
+    font-size: $body-md;
+    max-width: 85%;
+  }
+}
+
+.our-skill-right-col {
+  @include extraLargeSize {
+    max-width: 90%;
+  }
 }
 
 .bars {
   margin-block-start: 4.125em;
+
+  @include extraLargeSize {
+    margin-block-start: 0;
+  }
 }
 
 .bar {
-  margin-block-end: 1.25em;
+  margin-block-end: 2em;
+}
+
+.bar:last-child {
+  margin-block-end: 0;
 }
 
 .bar .info {
@@ -393,6 +436,10 @@
   font-size: 1.25rem;
   font-weight: 600;
   padding-inline-start: 0.5em;
+
+  @include extraLargeSize {
+    font-size: $headline-sm;
+  }
 }
 
 .info > *:first-child::before {
@@ -409,13 +456,17 @@
 .info-percentages {
   font-size: 1.75rem;
   font-weight: 300;
+
+  @include extraLargeSize {
+    font-size: 2.375rem;
+  }
 }
 
 .bar .line {
-  --width: 100%;
+  --scale-x: 0;
 
   position: relative;
-  width: var(--width);
+  width: 100%;
   height: 0.75em;
   background-color: #e2e2e2;
   border-radius: 0.25em;
@@ -430,6 +481,9 @@
   height: 100%;
   background-image: $gradient-8;
   border-radius: 8px;
+  transform-origin: 0 100%;
+  transform: scaleX(var(--scale-x));
+  transition: transform 1.5s ease;
 }
 
 .bar .creativity::before {
@@ -446,4 +500,17 @@
 
 .bar .analysis::before {
   width: 80%;
+}
+
+.our-skill-image {
+  position: absolute;
+  right: 0;
+  bottom: 7%;
+}
+
+.our-skill-image img {
+  width: 3.25em;
+  height: 3.25em;
+  object-fit: cover;
+  transform: rotate(18deg);
 }
