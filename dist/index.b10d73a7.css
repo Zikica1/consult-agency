@@ -3291,7 +3291,13 @@ main {
   .our-service {
     padding-block-start: 14.18em;
   }
+}
 
+.our-service-wrapper {
+  overflow: hidden;
+}
+
+@media (width >= 56.25rem) {
   .our-service-wrapper {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.25em;
@@ -3340,21 +3346,6 @@ main {
   }
 }
 
-.service-img-green {
-  z-index: -1;
-  transform: translate;
-  position: absolute;
-  top: 40%;
-  left: 0;
-  transform: translateX(-50%);
-}
-
-.service-half-circle-green {
-  object-fit: cover;
-  width: 2vw;
-  height: 2vw;
-}
-
 .our-fact {
   margin-block-start: 9.375em;
   position: relative;
@@ -3363,6 +3354,10 @@ main {
 .our-fact-wave-img {
   z-index: -1;
   position: absolute;
+}
+
+.our-fact-img-yellow {
+  margin-inline-start: 2.19em;
 }
 
 .our-fact .our-fact-container {
@@ -3404,6 +3399,13 @@ main {
   }
 }
 
+@media (width >= 56.25rem) {
+  .our-fact-img {
+    align-self: flex-start;
+    margin-block-start: 50px;
+  }
+}
+
 .our-fact-title {
   max-width: 43.75em;
   margin-block-end: 1.5em;
@@ -3434,6 +3436,7 @@ main {
 
 .our-fact-title p {
   font-size: .875rem;
+  line-height: 1.4;
 }
 
 @media (width >= 56.25rem) {
@@ -3455,9 +3458,17 @@ main {
 
 .our-stats {
   flex-direction: column;
-  gap: 5em;
-  margin-block-start: 8.125em;
+  gap: 4em;
+  margin-block: 8.125em 4em;
   display: flex;
+}
+
+@media (width >= 48rem) {
+  .our-stats {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-block: 5em 2em;
+  }
 }
 
 .our-stats > :first-child {
@@ -3466,8 +3477,14 @@ main {
 
 .our-stats-img {
   position: absolute;
-  bottom: 0;
+  top: 0;
   right: 0;
+}
+
+@media (width >= 48rem) {
+  .our-stats-img {
+    display: none;
+  }
 }
 
 .our-stats span {
@@ -3476,12 +3493,159 @@ main {
   font-weight: 500;
 }
 
+@media (width >= 56.25rem) {
+  .our-stats span {
+    font-size: 4rem;
+  }
+}
+
 .our-stats h4 {
   color: #212121;
   opacity: .95;
   margin-block: 4px 8px;
   font-size: 1.125rem;
   font-weight: 500;
+}
+
+@media (width >= 48rem) {
+  .our-stats h4 {
+    font-size: 1.3125rem;
+  }
+}
+
+.about-us {
+  margin-block-start: 9.375em;
+  padding-inline: 2.19em;
+}
+
+@media (width >= 56.25rem) {
+  .about-us-wrapper {
+    grid-template-columns: 55% 1fr;
+    display: grid;
+  }
+}
+
+.about-us-left-col-inner {
+  position: relative;
+}
+
+.about-us-img {
+  transform: translateX(-17px);
+}
+
+.about-us-img img {
+  border-radius: 0 6.25em;
+}
+
+.about-us-content {
+  --clipPath: polygon(0 0, 0 0, 0 100%, 0% 100%);
+  color: #00276a;
+  clip-path: var(--clipPath);
+  background-image: linear-gradient(135deg, #06b598 0%, #2ae5c5 100%);
+  border-radius: 3.125em 0;
+  max-width: 16.56em;
+  padding: 1.25em 1.25em .94em;
+  transition: all 1.25s;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translate(1.5em, 2.5em);
+}
+
+@media (width >= 48rem) {
+  .about-us-content {
+    transform: translate(1.5em, -3.5em);
+  }
+}
+
+@media (width >= 56.25rem) {
+  .about-us-content {
+    max-width: 17.81em;
+    padding: 35px 30px 22px;
+    transform: translate(3em, -3.5em);
+  }
+}
+
+.about-us-headline {
+  margin-block: .22em .55em;
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.33em;
+}
+
+@media (width >= 56.25rem) {
+  .about-us-headline {
+    font-size: 1.3125rem;
+  }
+}
+
+@media (width >= 65.375rem) {
+  .about-us-headline {
+    white-space: nowrap;
+    font-size: 1.5rem;
+  }
+}
+
+.about-us-description {
+  margin-block-end: 1em;
+  font-size: .875rem;
+  font-weight: 400;
+  line-height: 1.43em;
+}
+
+.about-us-right-col {
+  padding-block-start: 2.5em;
+}
+
+@media (width >= 48rem) {
+  .about-us-right-col {
+    padding-inline-start: 90px;
+  }
+}
+
+@media (width >= 56.25rem) {
+  .about-us-right-col {
+    padding-block-start: 0;
+  }
+}
+
+@media (width >= 65.375rem) {
+  .about-us-right-col {
+    padding-block-start: 6em;
+  }
+}
+
+@media (width >= 48rem) {
+  .about-us-right-col .btn-primary {
+    margin-block-start: 0;
+  }
+}
+
+.about-us-right-col h2 {
+  color: #00276a;
+  max-width: 19em;
+  font-size: 1.875rem;
+  font-weight: 600;
+  line-height: 1.26em;
+}
+
+@media (width >= 65.375rem) {
+  .about-us-right-col h2 {
+    font-size: 3rem;
+  }
+}
+
+.about-us-right-col p {
+  max-width: 42.86em;
+  margin-block: 2.14em 4.28em;
+  font-size: .875rem;
+  line-height: 1.43em;
+}
+
+@media (width >= 56.25rem) {
+  .about-us-right-col p {
+    font-size: 1rem;
+  }
 }
 
 /*# sourceMappingURL=index.b10d73a7.css.map */

@@ -586,8 +586,7 @@ function render2() {
             start: "top 90%",
             end: "bottom 80%",
             markers: false,
-            scrub: false,
-            stagger: 0.7
+            scrub: false
         }
     });
     tl3.add(countUp).to(".line", {

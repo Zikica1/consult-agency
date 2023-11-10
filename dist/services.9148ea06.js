@@ -582,33 +582,119 @@ load();
 //our services
 const mm = gsap.matchMedia();
 mm.add("(min-width: 1046px)", ()=>{
-    gsap.to(".service-half-circle-green", {
-        scrollTrigger: {
-            trigger: ".our-services-container",
-            start: "top 50%",
-            end: "+=30px 40%",
-            markers: false,
-            scrub: 2
-        },
-        x: -30,
-        duration: 0.5
-    });
     const tl = gsap.timeline({
         scrollTrigger: {
             trigger: ".our-fact-content",
             start: "top 50%",
-            end: "+=50px 25%",
+            end: "+=100px 10%",
             markers: false,
+            toggleActions: "play revers play revers",
             scrub: 2
         }
     });
     tl.to(".our-fact-img", {
-        rotate: "360deg",
-        duration: 1.5
+        rotation: 360,
+        duration: 3
     }).to(".our-fact-img-2", {
         y: -100,
+        duration: 3
+    }, "-=3");
+    gsap.to(".our-fact-img-yellow", {
+        scrollTrigger: {
+            trigger: ".our-stats",
+            start: "top 70%",
+            end: "bottom 20%",
+            markers: false,
+            scrub: 1.5
+        },
+        y: -100,
         duration: 1.5
-    }, "-=1.5");
+    });
+});
+//our services title
+gsap.from(".our-service-text", {
+    opacity: 0,
+    duration: 2
+});
+gsap.from(".our-service-title", {
+    y: "-100%",
+    duration: 1.8
+}, "-=1.8");
+//our services card
+const ourServicesCards = gsap.utils.toArray(".service-card-animation");
+ourServicesCards.forEach((card)=>{
+    gsap.from(card, {
+        scale: 1.2,
+        opacity: 0,
+        duration: 1.25,
+        scrollTrigger: {
+            trigger: card,
+            start: "top 60%",
+            end: "bottom 50%",
+            markers: false,
+            scrub: false,
+            stager: 0.5
+        }
+    });
+});
+//our-fact-counter
+const items = gsap.utils.toArray(".our-stats-item");
+items.forEach((item)=>{
+    gsap.from(item, {
+        opacity: 0,
+        x: 50,
+        duration: 1,
+        onStart: countUp,
+        scrollTrigger: {
+            trigger: item,
+            start: "top 80%",
+            end: "bottom 60%",
+            markers: false,
+            scrub: false
+        }
+    });
+});
+gsap.from(".our-fact-title", {
+    scrollTrigger: {
+        trigger: ".our-fact-title",
+        start: "top 70%",
+        end: "bottom 60%",
+        markers: false,
+        scrub: false
+    },
+    opacity: 0,
+    duration: 1.5
+});
+//counter
+let counter = document.querySelectorAll(".counter");
+function countUp() {
+    counter.forEach((counter)=>{
+        counter.innerText = "0";
+        const updateCounter = ()=>{
+            //count target
+            const target = +counter.getAttribute("data-target");
+            //current counter value
+            const c = +counter.innerText;
+            //increment
+            const increment = target / 35;
+            if (c < target) {
+                counter.innerText = `${Math.ceil(c + increment)}`;
+                setTimeout(updateCounter, 60);
+            } else counter.innerText = target;
+        };
+        updateCounter();
+    });
+}
+//about us
+gsap.to(".about-us-content", {
+    scrollTrigger: {
+        trigger: ".about-us-content",
+        start: "50px 80%",
+        end: "bottom 65%",
+        markers: false,
+        scrub: false
+    },
+    "--clipPath": "polygon(0 0, 100% 0, 100% 100%, 0 100%)"
 });
 
 },{"c33f0e3b3635c330":"9ZZ6v"}],"9ZZ6v":[function(require,module,exports) {

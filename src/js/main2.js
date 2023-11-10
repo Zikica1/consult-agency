@@ -9,7 +9,6 @@ export function render2() {
       end: 'bottom 80%',
       markers: false,
       scrub: false,
-      stagger: 0.7,
     },
   });
 

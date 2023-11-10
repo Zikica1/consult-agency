@@ -37,25 +37,19 @@ export function render() {
       '--y': '0',
       duration: 1,
     })
-    .from(
+    .fromTo(
       '.btn-gradient-3-ani',
       {
         opacity: 0,
         scaleY: 1.3,
         scaleX: 1.3,
-        duration: 0.15,
       },
-      '-=0.5'
-    )
-    .to(
-      '.btn-gradient-3-ani',
       {
         opacity: 1,
         scaleY: 1,
         scaleX: 1,
-        duration: 0.15,
-      },
-      '-=0.5'
+        duration: 0.25,
+      }
     )
     .from(
       '.footer-widg-img-right',

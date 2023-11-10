@@ -609,17 +609,16 @@ function render() {
     tl11.to(".footer-widget-ani", {
         "--y": "0",
         duration: 1
-    }).from(".btn-gradient-3-ani", {
+    }).fromTo(".btn-gradient-3-ani", {
         opacity: 0,
         scaleY: 1.3,
-        scaleX: 1.3,
-        duration: 0.15
-    }, "-=0.5").to(".btn-gradient-3-ani", {
+        scaleX: 1.3
+    }, {
         opacity: 1,
         scaleY: 1,
         scaleX: 1,
-        duration: 0.15
-    }, "-=0.5").from(".footer-widg-img-right", {
+        duration: 0.25
+    }).from(".footer-widg-img-right", {
         rotate: "-90deg",
         y: -100,
         opacity: 0,
