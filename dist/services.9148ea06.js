@@ -580,6 +580,7 @@ async function load() {
 }
 load();
 //our services
+//our fact
 const mm = gsap.matchMedia();
 mm.add("(min-width: 1046px)", ()=>{
     const tl = gsap.timeline({
@@ -608,6 +609,18 @@ mm.add("(min-width: 1046px)", ()=>{
             scrub: 1.5
         },
         y: -100,
+        duration: 1.5
+    });
+    gsap.from(".about-us-img-anim", {
+        scrollTrigger: {
+            trigger: ".about-us-img-anim",
+            start: "70px 70%",
+            end: "+=100 20%",
+            markers: false,
+            scrub: 2,
+            toggleActions: "play stop revers play"
+        },
+        x: 40,
         duration: 1.5
     });
 });
@@ -695,6 +708,23 @@ gsap.to(".about-us-content", {
         scrub: false
     },
     "--clipPath": "polygon(0 0, 100% 0, 100% 100%, 0 100%)"
+});
+const tl2 = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".about-us-right-col-anim",
+        start: "100px 75%",
+        end: "+=50px 40%",
+        markers: false,
+        scrub: false
+    }
+});
+tl2.to(".about-us-right-col-anim", {
+    "--scaleY": "0",
+    stagger: 0.6,
+    duration: 1.5
+}).from(".about-us-btn-anim", {
+    opacity: 0,
+    duration: 1.25
 });
 
 },{"c33f0e3b3635c330":"9ZZ6v"}],"9ZZ6v":[function(require,module,exports) {

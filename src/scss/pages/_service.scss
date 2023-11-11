@@ -319,3 +319,22 @@
     font-size: $body-md;
   }
 }
+
+.about-us-right-col-anim {
+  --scaleY: 1;
+
+  position: relative;
+}
+
+.about-us-right-col-anim::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  inset-inline-start: 0;
+  inset-block-start: 0;
+  background-color: #ffffff;
+  z-index: 1;
+  transform-origin: 0 100%;
+  transform: scaleY(var(--scaleY));
+}

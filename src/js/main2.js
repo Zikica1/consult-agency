@@ -1,45 +1,43 @@
 export function render2() {
-  let counter = document.querySelectorAll('.counter');
+  const bars = gsap.utils.toArray('.bar');
 
-  //our skill
-  const tl3 = gsap.timeline({
-    scrollTrigger: {
-      trigger: '.bar',
-      start: 'top 90%',
-      end: 'bottom 80%',
-      markers: false,
-      scrub: false,
-    },
-  });
-
-  tl3.add(countUp).to('.line', {
-    '--scale-x': '1',
-  });
-
-  //Counter
-  function countUp() {
-    counter.forEach((counter) => {
-      counter.innerText = '0';
-
-      const updateCounter = () => {
-        //count target
-        const target = +counter.getAttribute('data-target');
-
-        //current counter value
-        const c = +counter.innerText;
-
-        //increment
-        const increment = target / 35;
-
-        if (c < target) {
-          counter.innerText = `${Math.ceil(c + increment)}`;
-          setTimeout(updateCounter, 60);
-        } else {
-          counter.innerText = target;
-        }
-      };
-
-      updateCounter();
+  bars.forEach((bar) => {
+    gsap.to(bar.querySelector('.line'), {
+      '--scale-x': '1',
+      scrollTrigger: {
+        trigger: bar,
+        start: 'bottom 85%',
+        end: 'bottom top',
+        markers: true,
+        scrub: false,
+        onEnter: () => {
+          if (!bar.classList.contains('counted')) {
+            countUp(bar);
+            bar.classList.add('counted');
+          }
+        },
+      },
     });
+  });
+
+  // counter
+  function countUp(bar) {
+    const counter = bar.querySelector('.counter');
+    counter.innerText = '0';
+
+    const updateCounter = () => {
+      const target = +counter.getAttribute('data-target');
+      const current = +counter.innerText;
+      const increment = target / 35;
+
+      if (current < target) {
+        counter.innerText = `${Math.ceil(current + increment)}`;
+        setTimeout(updateCounter, 60);
+      } else {
+        counter.innerText = target;
+      }
+    };
+
+    updateCounter();
   }
 }

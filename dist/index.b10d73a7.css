@@ -3648,4 +3648,22 @@ main {
   }
 }
 
+.about-us-right-col-anim {
+  --scaleY: 1;
+  position: relative;
+}
+
+.about-us-right-col-anim:before {
+  content: "";
+  z-index: 1;
+  transform-origin: 0 100%;
+  transform: scaleY(var(--scaleY));
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+}
+
 /*# sourceMappingURL=index.b10d73a7.css.map */
