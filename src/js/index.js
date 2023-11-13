@@ -99,7 +99,7 @@ ScrollTrigger.matchMedia({
       scrollTrigger: {
         trigger: '.element-col-right',
         start: 'top 70%',
-        end: '150px 45%',
+        end: '150px 20%',
         markers: false,
         scrub: 3,
         toggleActions: 'play reverse play reverse',

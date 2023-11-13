@@ -8,7 +8,7 @@ export function render2() {
         trigger: bar,
         start: 'bottom 85%',
         end: 'bottom top',
-        markers: true,
+        markers: false,
         scrub: false,
         onEnter: () => {
           if (!bar.classList.contains('counted')) {
