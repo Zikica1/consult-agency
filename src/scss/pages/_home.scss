@@ -643,6 +643,7 @@
   border-top-right-radius: 50px;
   border-bottom-left-radius: 50px;
   margin-block-end: 2.187em;
+  transition: opacity 0.8s ease;
 
   @include smallSize {
     width: min(95%, 28.125em);
@@ -668,7 +669,7 @@
   border-top-right-radius: 50px;
   border-bottom-left-radius: 50px;
   background: $gradient-5;
-  transition: opacity 0.35s ease;
+  transition: opacity 0.8s ease;
 }
 
 .element-services-card:hover::before {

@@ -1481,6 +1481,7 @@ img, svg {
   margin-block-end: 2.187em;
   padding-block: 5em;
   padding-inline: 2.5em 2.875em;
+  transition: opacity .8s;
   position: relative;
   box-shadow: 0 0 35px #0000001a;
 }
@@ -1510,7 +1511,7 @@ img, svg {
   background: linear-gradient(#00276a 0%, #2c63c2 100%);
   border-top-right-radius: 50px;
   border-bottom-left-radius: 50px;
-  transition: opacity .35s;
+  transition: opacity .8s;
   position: absolute;
   inset: 0;
 }
@@ -3742,6 +3743,75 @@ main {
   margin-block-end: .71em;
   font-size: .94rem;
   display: inline-block;
+}
+
+.blog {
+  padding-block-start: 12.5em;
+  padding-inline: 2.19em;
+}
+
+.blog-wrapper {
+  grid-template-columns: 1fr;
+  gap: 45px;
+  display: grid;
+}
+
+@media (width >= 48rem) {
+  .blog-wrapper {
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+  }
+}
+
+.blog-card {
+  position: relative;
+}
+
+.blog-card-img img {
+  border-radius: 21px;
+}
+
+.blog-card-title {
+  background-image: linear-gradient(45deg, #2c63c2 0%, #00276a 100%);
+  border-radius: 21px;
+  width: min(100%, 26.875em);
+  padding: 1.25em .94px 1.25em 1.875em;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.blog-card-title:before {
+  content: "";
+  z-index: 1;
+  opacity: 0;
+  background-image: linear-gradient(135deg, #06b598 0%, #2ae5c5 100%);
+  border-radius: 21px;
+  transition: all .35s;
+  position: absolute;
+  inset: 0;
+}
+
+.blog-card:hover .blog-card-title:before {
+  opacity: 1;
+}
+
+.blog-card-title :is(time, h4) {
+  z-index: 2;
+  position: relative;
+}
+
+.blog-card-title time {
+  color: #ffffff59;
+  font-size: .875rem;
+}
+
+.blog-card-title h4 {
+  color: #fff;
+  max-width: 85%;
+  margin-block: .5em;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.6em;
 }
 
 /*# sourceMappingURL=index.b10d73a7.css.map */
