@@ -3814,4 +3814,146 @@ main {
   line-height: 1.6em;
 }
 
+.blog-article {
+  padding-block-start: 9.375em;
+  padding-inline: 2.19em;
+}
+
+.blog-article-img img {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.blog-article-content h1 {
+  color: #00276a;
+  text-align: center;
+  text-transform: capitalize;
+  margin-block: 90px 36px;
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1.3em;
+}
+
+.blog-article-info {
+  justify-content: center;
+  margin-block-end: 36px;
+  display: flex;
+}
+
+.blog-article-info :is(.blog-article-data, .blog-article-author, .blog-article-tex) {
+  padding-inline: .8em;
+}
+
+.blog-article-info :is(.blog-article-author, .blog-article-tex) {
+  position: relative;
+}
+
+.blog-article-info :is(.blog-article-author, .blog-article-tex):before {
+  content: "";
+  background-color: #bbb;
+  width: 1px;
+  height: 10px;
+  position: absolute;
+  top: 7px;
+  left: 0;
+}
+
+.blog-article-tex span {
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.blog-article-description {
+  margin-block-end: 1em;
+  font-size: .875rem;
+  line-height: 1.43em;
+}
+
+.blog-tags {
+  justify-content: space-between;
+  align-items: center;
+  margin-block-start: 100px;
+  display: flex;
+  position: relative;
+}
+
+.blog-tags-tex {
+  color: #202020;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.blog-tags-tex span {
+  color: #00276a;
+}
+
+.blog-buttons {
+  display: flex;
+}
+
+.blog-buttons :is(.blog-like, .blog-share) {
+  cursor: pointer;
+  background-color: #fff;
+  border-radius: 100%;
+  place-items: center;
+  display: grid;
+  position: relative;
+  box-shadow: 0 4px 20px #d6d6d6;
+}
+
+.blog-buttons :is(.blog-like, .blog-share):before {
+  content: "";
+  z-index: 1;
+  opacity: 0;
+  background-image: linear-gradient(135deg, #00276a 0%, #2c63c2 100%);
+  border-radius: 100%;
+  transition: all .35s;
+  position: absolute;
+  inset: 0;
+}
+
+.blog-buttons :is(.blog-like, .blog-share):hover:before {
+  opacity: 1;
+}
+
+.blog-buttons .blog-like {
+  width: 68px;
+  height: 59px;
+  margin-inline-end: 10px;
+}
+
+.blog-buttons .blog-share {
+  width: 56px;
+  height: 53px;
+}
+
+.blog-buttons :is(.blog-tags-img, .blog-tags-img) {
+  z-index: 2;
+  position: relative;
+}
+
+.blog-buttons :is(.blog-like, .blog-share):hover .blog-tags-img path {
+  stroke: #fff;
+}
+
+.blog-divider {
+  background-color: #ccc;
+  width: 100%;
+  height: 1px;
+  margin-block-start: 50px;
+}
+
+.blog-comment {
+  margin-inline: 2.19em;
+  padding-block-start: 80px;
+}
+
+.blog-comment-content h3 {
+  color: #00276a;
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 2.25em;
+}
+
 /*# sourceMappingURL=index.b10d73a7.css.map */
