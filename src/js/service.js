@@ -99,19 +99,51 @@ const items = gsap.utils.toArray('.our-stats-item');
 
 items.forEach((item) => {
   gsap.from(item, {
+    x: 80,
     opacity: 0,
-    x: 50,
-    duration: 1,
-    onStart: countUp,
+    duration: 1.5,
     scrollTrigger: {
       trigger: item,
       start: 'top 80%',
       end: 'bottom 60%',
       markers: false,
       scrub: false,
+      onEnter: () => {
+        if (!item.classList.contains('counted')) {
+          countUp(item);
+          item.classList.add('counted');
+        }
+      },
     },
   });
 });
+
+//counter
+
+function countUp(item) {
+  let counter = item.querySelector('.counter');
+  counter.innerText = '0';
+
+  const updateCounter = () => {
+    //count target
+    const target = +counter.getAttribute('data-target');
+
+    //current counter value
+    const c = +counter.innerText;
+
+    //increment
+    const increment = target / 35;
+
+    if (c < target) {
+      counter.innerText = `${Math.ceil(c + increment)}`;
+      setTimeout(updateCounter, 60);
+    } else {
+      counter.innerText = target;
+    }
+  };
+
+  updateCounter();
+}
 
 gsap.from('.our-fact-title', {
   scrollTrigger: {
@@ -124,35 +156,6 @@ gsap.from('.our-fact-title', {
   opacity: 0,
   duration: 1.5,
 });
-
-//counter
-let counter = document.querySelectorAll('.counter');
-
-function countUp() {
-  counter.forEach((counter) => {
-    counter.innerText = '0';
-
-    const updateCounter = () => {
-      //count target
-      const target = +counter.getAttribute('data-target');
-
-      //current counter value
-      const c = +counter.innerText;
-
-      //increment
-      const increment = target / 35;
-
-      if (c < target) {
-        counter.innerText = `${Math.ceil(c + increment)}`;
-        setTimeout(updateCounter, 60);
-      } else {
-        counter.innerText = target;
-      }
-    };
-
-    updateCounter();
-  });
-}
 
 //about us
 gsap.to('.about-us-content', {

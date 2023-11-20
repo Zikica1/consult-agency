@@ -5,3 +5,21 @@ async function load() {
 }
 
 load();
+
+const projectCards = gsap.utils.toArray('.project-card');
+
+projectCards.forEach((card) => {
+  gsap.from(card, {
+    scale: 1.05,
+    opacity: 0,
+    x: 80,
+    duration: 1.5,
+    scrollTrigger: {
+      trigger: card,
+      start: 'top 70%',
+      end: '+=150px 40%',
+      markers: false,
+      scrub: false,
+    },
+  });
+});

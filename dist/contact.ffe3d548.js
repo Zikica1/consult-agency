@@ -142,13 +142,13 @@
       this[globalName] = mainExports;
     }
   }
-})({"aFIZw":[function(require,module,exports) {
+})({"9A9wB":[function(require,module,exports) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "d6ea1d42532a7575";
-module.bundle.HMR_BUNDLE_ID = "aa2562915c8086b4";
+module.bundle.HMR_BUNDLE_ID = "167346a9ffe3d548";
 "use strict";
 /* global HMR_HOST, HMR_PORT, HMR_ENV_HASH, HMR_SECURE, chrome, browser, __parcel__import__, __parcel__importScripts__, ServiceWorkerGlobalScope */ /*::
 import type {
@@ -573,36 +573,20 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
     });
 }
 
-},{}],"bBf0d":[function(require,module,exports) {
+},{}],"3C9CX":[function(require,module,exports) {
 async function load() {
-    const page = await require("204688b390b347b4");
+    const page = await require("cf68c902bc5eaed3");
     page.render();
 }
 load();
-const projectCards = gsap.utils.toArray(".project-card");
-projectCards.forEach((card)=>{
-    gsap.from(card, {
-        scale: 1.05,
-        opacity: 0,
-        x: 80,
-        duration: 1.5,
-        scrollTrigger: {
-            trigger: card,
-            start: "top 70%",
-            end: "+=150px 40%",
-            markers: false,
-            scrub: false
-        }
-    });
-});
 
-},{"204688b390b347b4":"7mnZP"}],"7mnZP":[function(require,module,exports) {
-module.exports = require("96550f209c000945")(require("2d1a4af57cc5cfdb").getBundleURL("eBGmO") + "main.18dbc454.js" + "?" + Date.now()).catch((err)=>{
+},{"cf68c902bc5eaed3":"8d8ZS"}],"8d8ZS":[function(require,module,exports) {
+module.exports = require("ef96e78f3e117814")(require("a294b173d49b20f0").getBundleURL("1Vv9e") + "main.18dbc454.js" + "?" + Date.now()).catch((err)=>{
     delete module.bundle.cache[module.id];
     throw err;
 }).then(()=>module.bundle.root("1SICI"));
 
-},{"96550f209c000945":"61B45","2d1a4af57cc5cfdb":"lgJ39"}],"61B45":[function(require,module,exports) {
+},{"ef96e78f3e117814":"61B45","a294b173d49b20f0":"lgJ39"}],"61B45":[function(require,module,exports) {
 "use strict";
 var cacheLoader = require("ca2a84f7fa4a3bb0");
 module.exports = cacheLoader(function(bundle) {
@@ -699,6 +683,6 @@ exports.getBundleURL = getBundleURLCached;
 exports.getBaseURL = getBaseURL;
 exports.getOrigin = getOrigin;
 
-},{}]},["aFIZw","bBf0d"], "bBf0d", "parcelRequiree837")
+},{}]},["9A9wB","3C9CX"], "3C9CX", "parcelRequiree837")
 
-//# sourceMappingURL=project.5c8086b4.js.map
+//# sourceMappingURL=contact.ffe3d548.js.map
