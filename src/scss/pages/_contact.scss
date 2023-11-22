@@ -1,0 +1,198 @@
+@use '../abstracts' as *;
+
+.contact-us {
+  position: relative;
+  padding-block-start: 3.125em;
+
+  @include middleSize {
+    padding-block-start: 6.25em;
+  }
+}
+
+.contact-us-wrapper {
+  padding-inline: 2.19em;
+  padding-block-start: 9.375em;
+
+  @include middleSize {
+    margin-inline: 13%;
+  }
+
+  @include extraLargeSize {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5em;
+    margin-inline: unset;
+  }
+}
+
+.contact-us .wave-img {
+  position: absolute;
+  z-index: -1;
+}
+
+.contact-us-left-col {
+  position: relative;
+}
+
+.contact-us-left-col .contact-us-left-col-img {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.contact-us-left-col .btn-primary {
+  margin-block-start: 0;
+}
+
+.contact-us-content h2 {
+  color: $color-first;
+  font-size: 1.875rem;
+  font-weight: 600;
+  line-height: 1.27em;
+  margin-block: 0.17em 0.53em;
+
+  @include middleSize {
+    font-size: 2.5rem;
+  }
+
+  @include largeSize {
+    font-size: 3rem;
+  }
+}
+
+.contact-us-content p {
+  font-size: $body-sm;
+  line-height: 1.57em;
+  margin-block-end: 1em;
+  max-width: 90%;
+
+  @include middleSize {
+    font-size: $body-md;
+  }
+}
+
+.contact-us-form {
+  width: min(100%, 21.25em);
+  margin-block: 2.125em;
+
+  @include middleSize {
+    width: unset;
+  }
+}
+
+.contact-us-form label {
+  position: absolute;
+  left: -1000px;
+}
+
+.contact-us-form :where(input, textarea) {
+  color: #444444;
+  width: 100%;
+  background-color: #f2f2f2;
+  padding: 1.25em;
+  margin-block-end: 2.125em;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  font-size: $body-md;
+  font-family: inherit;
+}
+
+.contact-us-form textarea {
+  height: 15em;
+}
+
+.contact-us-form button {
+  float: right;
+}
+
+.contact-us-right-col {
+  position: relative;
+  padding-block: 4em;
+}
+
+.contact-us-map {
+  position: relative;
+}
+
+.google-logo {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+
+.contact-us-map-img img {
+  border-top-left-radius: 80px;
+  width: 100%;
+
+  @include extraLargeSize {
+    max-height: 41.875em;
+  }
+}
+
+.contact-us-info {
+  color: $color-first;
+  padding: 0.625em 1.875em;
+  background-image: $gradient-7;
+  border-bottom-right-radius: 80px;
+
+  @include extraLargeSize {
+    padding: 0 1.875em 0 3.75em;
+  }
+}
+
+.contact-us-list {
+  @include extraLargeSize {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+  }
+}
+
+.contact-us-list li {
+  margin-block: 3.75em 6.25em;
+
+  @include extraLargeSize {
+    margin-block: 2.5em 3.125em;
+  }
+}
+
+.contact-us-title {
+  position: relative;
+  font-size: 1.19em;
+  font-weight: 500px;
+  line-height: 1.56em;
+  padding-left: 1.05em;
+}
+
+.contact-us-title::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.52em;
+  width: 0.52em;
+  height: 0.52em;
+  background-image: url(../img/contact-halfcircle-yellow-img.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.contact-us-text {
+  font-size: $body-md;
+}
+
+.contact-rectangle-yellow-img {
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  right: 0;
+  transform: translateX(50%);
+}
+
+.contact-halfcircle-blu-img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(100%, -48%);
+}

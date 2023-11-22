@@ -21,7 +21,6 @@
     ></script>
     <script type="module" src="js/contact.js"></script>
     <title>Contact</title>
-    s
   </head>
   <body>
     <!--Header-->
@@ -87,51 +86,102 @@
 
     <!--Contact us-->
     <section class="contact-us">
-      <div class="contact-us-left-col">
-        <img src="img/wave.svg" alt="" />
+      <img class="wave-img" src="img/contact-wave-img.svg" />
+      <div class="contact-us-wrapper">
+        <div class="contact-us-left-col">
+          <div class="contact-us-left-col-img">
+            <img src="img/contact-halfcircle-grey-img.png" alt="" />
+          </div>
+          <div class="contact-us-content">
+            <h3 class="btn-primary">contact us</h3>
+            <h2>Ready to start project let's talk</h2>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo
+              temporibus dolorem assumenda optio, amet in ut officiis hic dolore
+              labore.
+            </p>
+          </div>
 
-        <div class="contact-us-content">
-          <h3 class="btn-primary">contact us</h3>
-          <h2>Ready to start project let's talk</h2>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo
-            temporibus dolorem assumenda optio, amet in ut officiis hic dolore
-            labore.
-          </p>
+          <div class="contact-us-form">
+            <form>
+              <div>
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" placeholder="Name" />
+              </div>
+              <div>
+                <label for="family">Family name</label>
+                <input
+                  type="text"
+                  name="family"
+                  id="family"
+                  placeholder="Family Name"
+                />
+              </div>
+              <div>
+                <label for="subject">Subject</label>
+                <input
+                  type="text"
+                  name="subject"
+                  id="subject"
+                  placeholder="Subject"
+                />
+              </div>
+              <div>
+                <label for="message">Message</label>
+                <textarea
+                  name="message"
+                  id="message"
+                  placeholder="message"
+                ></textarea>
+              </div>
+
+              <button class="btn-gradient">
+                <span class="btn-text">submit now</span>
+              </button>
+            </form>
+          </div>
         </div>
 
-        <div class="contact-us-form">
-          <form>
-            <div>
-              <label for="name">Name</label>
-              <input type="text" name="name" id="name" placeholder="Name" />
-            </div>
-            <div>
-              <label for="family">Family name</label>
-              <input
-                type="text"
-                name="family"
-                id="family"
-                placeholder="Family Name"
-              />
-            </div>
-            <div>
-              <label for="subject">Subject</label>
-              <input type="text" name="subject" id="subject" />
-            </div>
-            <div>
-              <label for="message">Message</label>
-              <textarea
-                name="message"
-                id="message"
-                placeholder="message"
-              ></textarea>
+        <div class="contact-us-right-col">
+          <div class="contact-halfcircle-blu-img">
+            <img src="img/contact-half-circle-blue.png" alt="" />
+          </div>
+          <div>
+            <div class="contact-us-map">
+              <div class="contact-us-map-img">
+                <img src="img/contact-map.png" alt="" />
+              </div>
+
+              <div class="google-logo">
+                <a href="#">
+                  <img src="img/google-logo.png" alt="" />
+                </a>
+              </div>
             </div>
 
-            <button class="btn-gradient">
-              <span class="btn-text">submit now</span>
-            </button>
-          </form>
+            <div class="contact-us-info">
+              <ul class="contact-us-list">
+                <li>
+                  <h4 class="contact-us-title">Phone:</h4>
+                  <p class="contact-us-text">+145 6894 984</p>
+                </li>
+                <li>
+                  <h4 class="contact-us-title">Address:</h4>
+                  <p class="contact-us-text">
+                    34 Linnet Ln, Liverpool L17 3BQ, United Kingdom
+                  </p>
+                </li>
+                <li>
+                  <h4 class="contact-us-title">Email:</h4>
+                  <p class="contact-us-text">consaltingagency@gami.com</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="contact-rectangle-yellow-img">
+            <img src="img/contact-rectangle-yellow.png" alt="" />
+          </div>
         </div>
       </div>
     </section>
