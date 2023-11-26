@@ -149,7 +149,7 @@
 //animation about
 .welcome-img-anim {
   --opacity: 0;
-  --x: -50%;
+  --x: -100px;
 
   opacity: var(--opacity);
   transform: translateX(var(--x));

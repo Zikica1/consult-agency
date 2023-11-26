@@ -599,13 +599,12 @@ ScrollTrigger.matchMedia({
         gsap.to(".hero-background", {
             scrollTrigger: {
                 trigger: ".hero-background",
-                start: "70% 90%",
-                end: "bottom 70%",
+                start: "50% 90%",
+                end: "bottom 40%",
                 scrub: true,
                 markers: false
             },
-            x: -200,
-            duration: 1
+            x: -200
         });
         gsap.from(".grey-circle", {
             scrollTrigger: {
@@ -653,7 +652,7 @@ ScrollTrigger.matchMedia({
                 start: "top 70%",
                 end: "150px 20%",
                 markers: false,
-                scrub: 3,
+                scrub: 2,
                 toggleActions: "play reverse play reverse"
             }
         });

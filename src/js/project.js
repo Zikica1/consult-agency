@@ -14,6 +14,7 @@ projectCards.forEach((card) => {
     opacity: 0,
     x: 80,
     duration: 1.5,
+    delay: 0.35,
     scrollTrigger: {
       trigger: card,
       start: 'top 70%',

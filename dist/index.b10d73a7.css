@@ -36,6 +36,65 @@ img, svg {
   display: block;
 }
 
+.scrollToTop-btn {
+  color: #444;
+  z-index: 9999;
+  cursor: pointer;
+  opacity: 0;
+  background-color: #fff;
+  border: 1px solid #444;
+  border-radius: 50%;
+  place-items: center;
+  width: 2.5em;
+  height: 2.5em;
+  font-size: .875rem;
+  transition: all .5s;
+  display: grid;
+  position: fixed;
+  bottom: 1.43em;
+  right: 0;
+}
+
+.scrollToTop-btn:hover {
+  color: #fff;
+}
+
+.scrollToTop-btn:before {
+  content: "";
+  z-index: -1;
+  background-color: #444;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  transition: transform .35s;
+  position: absolute;
+  transform: scale(0);
+}
+
+.scrollToTop-btn:hover:before {
+  transform: scale(1);
+}
+
+.scrollToTop-btn.active {
+  opacity: 1;
+  pointer-events: all;
+  right: 1.25em;
+}
+
+::-webkit-scrollbar {
+  background-color: #ece9e9;
+  width: .937em;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #b1b1b1;
+  border-radius: 2em;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #979696;
+}
+
 @keyframes SlideFromLeft2 {
   to {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
@@ -516,7 +575,6 @@ img, svg {
 
 .footer {
   margin-block-start: 9.375em;
-  padding-block-start: 9.375em;
   padding-inline: 2.19em;
   font-size: 1.06rem;
   position: relative;
@@ -1153,8 +1211,8 @@ img, svg {
 .hero .grey-circle {
   background-image: linear-gradient(354deg, #efefef 0%, #f9f9f9 100%);
   border-radius: 50%;
-  width: 400px;
-  height: 400px;
+  width: 21.87em;
+  height: 21.87em;
   display: none;
   position: absolute;
   bottom: 0;
@@ -1511,7 +1569,7 @@ img, svg {
   background: linear-gradient(#00276a 0%, #2c63c2 100%);
   border-top-right-radius: 50px;
   border-bottom-left-radius: 50px;
-  transition: opacity .8s;
+  transition: opacity .7s;
   position: absolute;
   inset: 0;
 }
@@ -2911,7 +2969,7 @@ main {
 
 .welcome-img-anim {
   --opacity: 0;
-  --x: -50%;
+  --x: -100px;
   opacity: var(--opacity);
   transform: translateX(var(--x));
 }
@@ -4120,6 +4178,10 @@ main {
 
 .contact-us-left-col .btn-primary {
   margin-block-start: 0;
+}
+
+.contact-us-content {
+  overflow: hidden;
 }
 
 .contact-us-content h2 {

@@ -684,6 +684,15 @@ function render() {
         duration: 1
     });
 }
+//scrollToTop-btn
+const scrollTopButton = document.querySelector(".scrollToTop-btn");
+window.addEventListener("scroll", ()=>{
+    scrollTopButton.classList.toggle("active", window.scrollY > 50);
+});
+scrollTopButton.addEventListener("click", ()=>{
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+});
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gkKU3":[function(require,module,exports) {
 exports.interopDefault = function(a) {
