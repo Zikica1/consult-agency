@@ -81,14 +81,14 @@ ourServicesCards.forEach((card) => {
   gsap.from(card, {
     scale: 1.2,
     opacity: 0,
-    duration: 1.25,
+    duration: 1,
     scrollTrigger: {
       trigger: card,
       start: 'top 60%',
       end: 'bottom 50%',
       markers: false,
       scrub: false,
-      stager: 0.5,
+      stagger: 0.6,
     },
   });
 });

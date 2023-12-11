@@ -77,13 +77,13 @@ mm.add('(min-width: 1046px)', () => {
 
   gsap.to('.contact-rectangle-img-anim', {
     y: 60,
-    duration: 1,
+    duration: 1.5,
     scrollTrigger: {
       trigger: '.contact-us-info',
-      start: '50px 80%',
-      end: 'top 40%',
+      start: '50px 70%',
+      end: 'top 20%',
       markers: false,
-      scrub: 2,
+      scrub: 1,
     },
   });
 });

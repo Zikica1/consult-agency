@@ -3359,6 +3359,7 @@ main {
 @media (width >= 56.25rem) {
   .our-service-wrapper {
     grid-template-columns: repeat(2, 1fr);
+    align-items: end;
     gap: 1.25em;
     display: grid;
   }
@@ -3371,6 +3372,12 @@ main {
   font-size: 1.875rem;
   font-weight: 600;
   line-height: 1.24em;
+}
+
+@media (width >= 56.25rem) {
+  .our-service-title h2 {
+    margin-block: 0;
+  }
 }
 
 @media (width >= 65.375rem) {
@@ -3388,7 +3395,6 @@ main {
 
 @media (width >= 56.25rem) {
   .our-service-text {
-    align-self: center;
     font-size: 1rem;
   }
 }

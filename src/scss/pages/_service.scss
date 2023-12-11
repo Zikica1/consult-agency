@@ -15,6 +15,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1.25em;
+    align-items: end;
   }
 }
 
@@ -25,6 +26,10 @@
   line-height: 1.24em;
   margin-block: 0.16em 0.53em;
   text-transform: capitalize;
+
+  @include largeSize {
+    margin-block: 0;
+  }
 
   @include extraLargeSize {
     font-size: 3rem;
@@ -38,7 +43,6 @@
   margin-block: 2.5em 1em;
 
   @include largeSize {
-    align-self: center;
     font-size: $body-md;
   }
 }
