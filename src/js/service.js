@@ -79,17 +79,18 @@ const ourServicesCards = gsap.utils.toArray('.service-card-animation');
 
 ourServicesCards.forEach((card) => {
   gsap.from(card, {
-    scaleY: 1.2,
-    scaleX: 1.2,
+    scaleY: 1.3,
+    scaleX: 1.3,
     opacity: 0,
-    duration: 2.5,
+    duration: 1.5,
+    // delay: 0.2,
     scrollTrigger: {
       trigger: card,
       start: 'top 60%',
       end: 'bottom 50%',
       markers: false,
       scrub: false,
-      stagger: 0.6,
+      // stagger: 0.6,
     },
   });
 });
