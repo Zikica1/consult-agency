@@ -416,7 +416,7 @@ img, svg {
   border: none;
   width: 1.5em;
   height: 1.5em;
-  animation: 2s ease-in-out 3.1s forwards SlideFromLeft2;
+  animation: 2s ease-in-out 2.5s forwards SlideFromLeft2;
   position: relative;
 }
 

@@ -178,7 +178,7 @@
   height: 1.5em;
   cursor: pointer;
   clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
-  animation: SlideFromLeft2 2s ease-in-out 3.1s forwards;
+  animation: SlideFromLeft2 2s ease-in-out 2.5s forwards;
 
   @include largeSize {
     display: none;
