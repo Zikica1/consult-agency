@@ -575,6 +575,7 @@ img, svg {
 
 .footer {
   margin-block-start: 9.375em;
+  padding-block-start: 4.69em;
   padding-inline: 2.19em;
   font-size: 1.06rem;
   position: relative;
