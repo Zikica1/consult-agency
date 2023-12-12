@@ -79,7 +79,8 @@ const ourServicesCards = gsap.utils.toArray('.service-card-animation');
 
 ourServicesCards.forEach((card) => {
   gsap.from(card, {
-    scale: 1.3,
+    scaleY: 1.3,
+    scaleX: 1.3,
     opacity: 0,
     duration: 1.5,
     delay: 0.2,
