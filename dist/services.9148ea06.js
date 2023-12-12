@@ -637,10 +637,9 @@ gsap.from(".our-service-title", {
 const ourServicesCards = gsap.utils.toArray(".service-card-animation");
 ourServicesCards.forEach((card)=>{
     gsap.from(card, {
-        // scaleY: 1.3,
-        // scaleX: 1.3,
+        scale: 1.3,
         opacity: 0,
-        duration: 1,
+        duration: 1.5,
         // delay: 0.2,
         scrollTrigger: {
             trigger: card,

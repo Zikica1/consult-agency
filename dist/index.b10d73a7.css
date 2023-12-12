@@ -1540,7 +1540,6 @@ img, svg {
   margin-block-end: 2.187em;
   padding-block: 5em;
   padding-inline: 2.5em 2.875em;
-  transition: opacity .8s;
   position: relative;
   box-shadow: 0 0 35px #0000001a;
 }
@@ -1570,7 +1569,7 @@ img, svg {
   background: linear-gradient(#00276a 0%, #2c63c2 100%);
   border-top-right-radius: 50px;
   border-bottom-left-radius: 50px;
-  transition: opacity .7s;
+  transition: opacity 1s;
   position: absolute;
   inset: 0;
 }
