@@ -640,7 +640,7 @@ ourServicesCards.forEach((card)=>{
         scale: 1.3,
         opacity: 0,
         duration: 1.5,
-        // delay: 0.2,
+        delay: 0.2,
         scrollTrigger: {
             trigger: card,
             start: "top 60%",
