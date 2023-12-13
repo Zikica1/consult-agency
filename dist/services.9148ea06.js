@@ -634,7 +634,7 @@ gsap.from(".our-service-title", {
     duration: 1.8
 }, "-=1.8");
 //our services card
-const ourServicesCards = gsap.utils.toArray(".service-card-animation");
+const ourServicesCards = gsap.utils.toArray(".element-services-card");
 ourServicesCards.forEach((card)=>{
     gsap.from(card, {
         scaleY: 1.3,
