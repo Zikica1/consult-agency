@@ -644,7 +644,7 @@
   border-bottom-left-radius: 50px;
   margin-block-end: 2.187em;
   // transition: opacity 0.8s ease;
-  will-change: transform;
+  will-change: transform, opacity;
 
   @include smallSize {
     width: min(95%, 28.125em);

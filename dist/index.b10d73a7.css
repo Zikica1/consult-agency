@@ -1534,7 +1534,7 @@ img, svg {
 }
 
 .element-services-card {
-  will-change: transform;
+  will-change: transform, opacity;
   background-color: #fff;
   border-top-right-radius: 50px;
   border-bottom-left-radius: 50px;
