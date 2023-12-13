@@ -1534,6 +1534,7 @@ img, svg {
 }
 
 .element-services-card {
+  will-change: transform, opacity;
   background-color: #fff;
   border-top-right-radius: 50px;
   border-bottom-left-radius: 50px;
@@ -1667,13 +1668,6 @@ img, svg {
   .element-srvices-card-3 {
     grid-area: 3 / 9 / 9 / 13;
   }
-}
-
-.element-services-card-3 :where(.rectangle-shape-grey) {
-  z-index: -1;
-  position: absolute;
-  top: -20px;
-  right: -20px;
 }
 
 .element-portfolio {

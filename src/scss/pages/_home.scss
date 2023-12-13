@@ -644,7 +644,7 @@
   border-bottom-left-radius: 50px;
   margin-block-end: 2.187em;
   // transition: opacity 0.8s ease;
-  // will-change: transform, opacity;
+  will-change: transform, opacity;
 
   @include smallSize {
     width: min(95%, 28.125em);
@@ -762,12 +762,12 @@
   }
 }
 
-.element-services-card-3 :where(.rectangle-shape-grey) {
-  position: absolute;
-  top: -20px;
-  right: -20px;
-  z-index: -1;
-}
+// .element-services-card-3 :where(.rectangle-shape-grey) {
+//   position: absolute;
+//   top: -20px;
+//   right: -20px;
+//   z-index: -1;
+// }
 
 /* Element Portfolio */
 .element-portfolio {
