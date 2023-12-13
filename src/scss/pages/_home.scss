@@ -644,7 +644,7 @@
   border-bottom-left-radius: 50px;
   margin-block-end: 2.187em;
   // transition: opacity 0.8s ease;
-  will-change: transform, opacity;
+  // will-change: transform, opacity;
 
   @include smallSize {
     width: min(95%, 28.125em);
@@ -664,7 +664,7 @@
 .element-services-card::before {
   content: '';
   position: absolute;
-  z-index: 1;
+  z-index: 2;
   opacity: 0;
   inset: 0;
   border-top-right-radius: 50px;
@@ -762,16 +762,11 @@
   }
 }
 
-.rectangle-shape-grey {
+.element-services-card-3 :where(.rectangle-shape-grey) {
   position: absolute;
-  z-index: -2;
   top: -20px;
   right: -20px;
-
-  @include largeSize {
-    top: -45px;
-    right: -10px;
-  }
+  z-index: -1;
 }
 
 /* Element Portfolio */

@@ -75,7 +75,7 @@ gsap.from(
 );
 
 //our services card
-const ourServicesCards = gsap.utils.toArray('.element-services-card');
+const ourServicesCards = gsap.utils.toArray('.service-card-animation');
 
 ourServicesCards.forEach((card) => {
   gsap.from(card, {

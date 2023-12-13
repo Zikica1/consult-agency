@@ -1534,7 +1534,6 @@ img, svg {
 }
 
 .element-services-card {
-  will-change: transform, opacity;
   background-color: #fff;
   border-top-right-radius: 50px;
   border-bottom-left-radius: 50px;
@@ -1565,7 +1564,7 @@ img, svg {
 
 .element-services-card:before {
   content: "";
-  z-index: 1;
+  z-index: 2;
   opacity: 0;
   background: linear-gradient(#00276a 0%, #2c63c2 100%);
   border-top-right-radius: 50px;
@@ -1670,18 +1669,11 @@ img, svg {
   }
 }
 
-.rectangle-shape-grey {
-  z-index: -2;
+.element-services-card-3 :where(.rectangle-shape-grey) {
+  z-index: -1;
   position: absolute;
   top: -20px;
   right: -20px;
-}
-
-@media (width >= 56.25rem) {
-  .rectangle-shape-grey {
-    top: -45px;
-    right: -10px;
-  }
 }
 
 .element-portfolio {
