@@ -86,12 +86,12 @@ ourServicesCards.forEach((card) => {
       markers: false,
       scrub: false,
       onEnter: () => {
-        card.addEventListener('mouseenter', () => {
+        card.addEventListener('scroll', () => {
           card.style.willChange = 'transform, opacity';
         });
       },
       onLeave: () => {
-        card.addEventListener('mouseleave', () => {
+        card.addEventListener('scroll', () => {
           card.style.willChange = 'auto';
         });
       },
