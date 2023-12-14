@@ -79,10 +79,6 @@ const ourServicesCards = gsap.utils.toArray('.element-services-card');
 
 ourServicesCards.forEach((card) => {
   gsap.from(card, {
-    scaleY: 1.3,
-    scaleX: 1.3,
-    opacity: 0,
-    duration: 1.5,
     scrollTrigger: {
       trigger: card,
       start: 'top 60%',
@@ -101,6 +97,10 @@ ourServicesCards.forEach((card) => {
       },
       // stagger: 0.6,
     },
+    scaleY: 1.3,
+    scaleX: 1.3,
+    opacity: 0,
+    duration: 1.5,
   });
 });
 
