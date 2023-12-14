@@ -1534,7 +1534,6 @@ img, svg {
 }
 
 .element-services-card {
-  will-change: transform, opacity;
   background-color: #fff;
   border-top-right-radius: 50px;
   border-bottom-left-radius: 50px;
@@ -1565,7 +1564,7 @@ img, svg {
 
 .element-services-card:before {
   content: "";
-  z-index: 2;
+  z-index: 1;
   opacity: 0;
   background: linear-gradient(#00276a 0%, #2c63c2 100%);
   border-top-right-radius: 50px;
@@ -1577,6 +1576,13 @@ img, svg {
 
 .element-services-card:hover:before {
   opacity: 1;
+}
+
+.rectangle-shape-grey {
+  z-index: -1;
+  position: absolute;
+  top: -20px;
+  right: -20px;
 }
 
 .element-services-card .rectangle-shape {
