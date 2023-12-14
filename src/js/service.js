@@ -78,14 +78,6 @@ gsap.from(
 const ourServicesCards = gsap.utils.toArray('.element-services-card');
 
 ourServicesCards.forEach((card) => {
-  card.addEventListener('mouseenter', () => {
-    card.style.willChange = 'transform, opacity';
-  });
-
-  card.addEventListener('mouseleave', () => {
-    card.style.willChange = 'auto';
-  });
-
   gsap.from(card, {
     scaleY: 1.3,
     scaleX: 1.3,
@@ -97,6 +89,16 @@ ourServicesCards.forEach((card) => {
       end: 'bottom 50%',
       markers: false,
       scrub: false,
+      onEnter: () => {
+        card.addEventListener('mouseenter', () => {
+          card.style.willChange = 'transform, opacity';
+        });
+      },
+      onLeave: () => {
+        card.addEventListener('mouseleave', () => {
+          card.style.willChange = 'auto';
+        });
+      },
       // stagger: 0.6,
     },
   });
