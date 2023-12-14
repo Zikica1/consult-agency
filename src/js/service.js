@@ -86,14 +86,10 @@ ourServicesCards.forEach((card) => {
       markers: false,
       scrub: false,
       onEnter: () => {
-        card.addEventListener('scroll', () => {
-          card.style.willChange = 'transform, opacity';
-        });
+        card.style.willChange = 'transform, opacity';
       },
       onLeave: () => {
-        card.addEventListener('scroll', () => {
-          card.style.willChange = 'auto';
-        });
+        card.style.willChange = 'auto';
       },
       // stagger: 0.6,
     },
