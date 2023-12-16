@@ -67,13 +67,11 @@
   max-width: 85%;
 }
 
-// .blog-card-1 {
-//   --opacity: 0;
-//   --scale: 1.1;
+.blog-card-anim {
+  --opacity: 0;
+  --y: -10px;
 
-//   @media (max-width: 31.25rem) {
-//     opacity: var(--opacity);
-//     transform: scale(var(--scale));
-//     // transition: transform 500ms ease, opacity 500ms ease;
-//   }
-// }
+  opacity: var(--opacity);
+  transform: translateY(var(--y));
+  transition: opacity 0.35s ease, transform 0.35s, ease;
+}

@@ -3871,6 +3871,14 @@ main {
   line-height: 1.6em;
 }
 
+.blog-card-anim {
+  --opacity: 0;
+  --y: -10px;
+  opacity: var(--opacity);
+  transform: translateY(var(--y));
+  transition: opacity .35s, transform .35s, all;
+}
+
 .blog-article {
   padding-block-start: 9.375em;
   padding-inline: 2.19em;

@@ -579,27 +579,27 @@ async function load() {
     page.render();
 }
 load();
-const mm = gsap.matchMedia();
-mm.add("(max-width: 500px)", ()=>{
-    gsap.to(".blog-card-1", {
-        "--opacity": "1",
-        "--scale": "scale(1)",
-        duration: 1
-    });
-});
+// const mm = gsap.matchMedia();
+// mm.add('(max-width: 500px)', () => {
+//   gsap.to('.blog-card-1', {
+//     '--opacity': '1',
+//     '--scale': 'scale(1)',
+//     duration: 1,
+//   });
+// });
 const mm2 = gsap.matchMedia();
 mm2.add("(max-width:1080px)", ()=>{
     const blogCards = gsap.utils.toArray(".blog-card-anim");
     blogCards.forEach((card)=>{
-        gsap.from(card, {
-            opacity: 0,
-            y: -10,
-            duration: 1,
+        gsap.to(card, {
+            "--opacity": "1",
+            "--y": 0,
+            duration: 0.75,
             scrollTrigger: {
                 trigger: card,
-                start: "100px 75%",
-                end: "bottom 50%",
-                markers: false,
+                start: "100px 60%",
+                end: "bottom 20%",
+                markers: true,
                 scrub: false
             }
         });
