@@ -30,7 +30,7 @@ mm2.add('(max-width:1080px)', () => {
         trigger: card,
         start: '100px 60%',
         end: 'bottom 20%',
-        markers: true,
+        markers: false,
         scrub: false,
       },
     });
