@@ -1665,13 +1665,13 @@ img, svg {
 }
 
 @media (width >= 56.25rem) {
-  .element-srvices-card-3 {
+  .element-services-card-3 {
     grid-column: 4 / 10;
   }
 }
 
 @media (width >= 65.375rem) {
-  .element-srvices-card-3 {
+  .element-services-card-3 {
     grid-area: 3 / 9 / 9 / 13;
   }
 }
